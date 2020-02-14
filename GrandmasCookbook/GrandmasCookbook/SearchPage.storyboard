@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8bN-vH-Jj5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="h9T-Sa-WA1">
+            <objects>
+                <viewController id="8bN-vH-Jj5" customClass="SearchViewController" customModule="GrandmasCookbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dC2-zQ-B6S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aAy-fC-Pel">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="nfS-3x-bmx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aAy-fC-Pel" firstAttribute="height" secondItem="dC2-zQ-B6S" secondAttribute="height" multiplier="0.1" id="0Bd-6j-x2J"/>
+                            <constraint firstItem="nfS-3x-bmx" firstAttribute="bottom" secondItem="aAy-fC-Pel" secondAttribute="bottom" constant="-8" id="0Qg-iU-Rvi"/>
+                            <constraint firstItem="aAy-fC-Pel" firstAttribute="top" secondItem="dC2-zQ-B6S" secondAttribute="top" id="1N5-57-KRc"/>
+                            <constraint firstItem="aAy-fC-Pel" firstAttribute="leading" secondItem="QhO-KI-N7f" secondAttribute="leading" id="Cbm-KB-Rsr"/>
+                            <constraint firstItem="nfS-3x-bmx" firstAttribute="centerX" secondItem="aAy-fC-Pel" secondAttribute="centerX" id="M20-xS-nIg"/>
+                            <constraint firstItem="nfS-3x-bmx" firstAttribute="top" secondItem="QhO-KI-N7f" secondAttribute="top" id="QDV-ok-sXa"/>
+                            <constraint firstItem="aAy-fC-Pel" firstAttribute="trailing" secondItem="QhO-KI-N7f" secondAttribute="trailing" id="aKw-ro-PDD"/>
+                            <constraint firstItem="nfS-3x-bmx" firstAttribute="width" secondItem="aAy-fC-Pel" secondAttribute="width" id="tNg-M2-72E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QhO-KI-N7f"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="searchButton" id="MGR-b4-zmH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXK-uE-vWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3844.9275362318845" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="375" height="812"/>
+        <image name="logoHorizontal" width="179.5" height="43"/>
+        <image name="searchButton" width="25" height="25"/>
+    </resources>
+</document>

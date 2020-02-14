@@ -47,179 +47,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155" y="129"/>
+            <point key="canvasLocation" x="1583" y="-773"/>
         </scene>
         <!--Pantry-->
-        <scene sceneID="oo8-NM-diw">
+        <scene sceneID="jdY-9r-8OZ">
             <objects>
-                <viewController id="Mqs-ND-HlQ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Phq-0R-nnI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="6TS-8g-aCD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="a5I-cF-go8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="a5I-cF-go8" firstAttribute="width" secondItem="6TS-8g-aCD" secondAttribute="width" id="0ak-Fx-eno"/>
-                            <constraint firstItem="6TS-8g-aCD" firstAttribute="leading" secondItem="Phq-0R-nnI" secondAttribute="leading" id="Kbu-F2-fbF"/>
-                            <constraint firstItem="a5I-cF-go8" firstAttribute="top" secondItem="Bfj-Ar-00w" secondAttribute="top" id="NDD-qO-Kk1"/>
-                            <constraint firstItem="6TS-8g-aCD" firstAttribute="trailing" secondItem="Phq-0R-nnI" secondAttribute="trailing" id="TbM-AW-jUQ"/>
-                            <constraint firstItem="a5I-cF-go8" firstAttribute="centerX" secondItem="6TS-8g-aCD" secondAttribute="centerX" id="ZSf-wl-Klm"/>
-                            <constraint firstItem="6TS-8g-aCD" firstAttribute="height" secondItem="Phq-0R-nnI" secondAttribute="height" multiplier="0.1" id="hNU-U9-XEF"/>
-                            <constraint firstItem="a5I-cF-go8" firstAttribute="bottom" secondItem="6TS-8g-aCD" secondAttribute="bottom" constant="-8" id="sUi-lD-umB"/>
-                            <constraint firstItem="6TS-8g-aCD" firstAttribute="top" secondItem="Phq-0R-nnI" secondAttribute="top" id="xdN-cL-zed"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Bfj-Ar-00w"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Pantry" image="pantryButton" id="E3K-0Y-rf4"/>
-                    <navigationItem key="navigationItem" id="Hnl-sm-cmS"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Mg-K6-arx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="PantryPage" storyboardName="Pantry" id="ZNO-sw-0DC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rE5-f9-g7j"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPs-mj-CaJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884.05797101449286" y="128.57142857142856"/>
+            <point key="canvasLocation" x="2093" y="-336"/>
         </scene>
-        <!--Shopping List-->
-        <scene sceneID="fyt-tu-Jcx">
+        <!--ShoppingList-->
+        <scene sceneID="TUI-0i-eLz">
             <objects>
-                <viewController id="QMm-7z-28x" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kxj-pX-d4C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="69F-nX-ULj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="Agq-rL-mHd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Agq-rL-mHd" firstAttribute="width" secondItem="69F-nX-ULj" secondAttribute="width" id="20d-A1-Myi"/>
-                            <constraint firstItem="Agq-rL-mHd" firstAttribute="centerX" secondItem="69F-nX-ULj" secondAttribute="centerX" id="3NS-tB-ve7"/>
-                            <constraint firstItem="69F-nX-ULj" firstAttribute="leading" secondItem="Kxj-pX-d4C" secondAttribute="leading" id="Bmf-V0-kkZ"/>
-                            <constraint firstItem="Agq-rL-mHd" firstAttribute="bottom" secondItem="69F-nX-ULj" secondAttribute="bottom" constant="-8" id="NPX-Z0-biL"/>
-                            <constraint firstItem="69F-nX-ULj" firstAttribute="top" secondItem="Kxj-pX-d4C" secondAttribute="top" id="d57-On-gkB"/>
-                            <constraint firstAttribute="trailing" secondItem="69F-nX-ULj" secondAttribute="trailing" id="lhq-CQ-CwX"/>
-                            <constraint firstItem="69F-nX-ULj" firstAttribute="height" secondItem="Kxj-pX-d4C" secondAttribute="height" multiplier="0.1" id="lxn-oR-kUn"/>
-                            <constraint firstItem="Agq-rL-mHd" firstAttribute="top" secondItem="H7C-0y-HX2" secondAttribute="top" id="uqC-4F-rYh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="H7C-0y-HX2"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Shopping List" image="listButton" id="2tv-yv-Dcd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OqF-cB-OlY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ShoppingList" id="Mp5-hY-LQd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="LGq-FN-zag"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zw6-zV-4Y9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668.1159420289857" y="128.57142857142856"/>
+            <point key="canvasLocation" x="2233" y="-336"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="lAr-VH-kaQ">
+        <!--HomePage-->
+        <scene sceneID="G7x-dT-jRP">
             <objects>
-                <viewController id="7bC-73-0Vx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DaO-Dt-ez3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="g2o-Pa-rkh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="sNL-a1-yda">
-                                <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="g2o-Pa-rkh" firstAttribute="trailing" secondItem="DaO-Dt-ez3" secondAttribute="trailing" id="4Q9-7c-OAm"/>
-                            <constraint firstItem="g2o-Pa-rkh" firstAttribute="top" secondItem="DaO-Dt-ez3" secondAttribute="top" id="JNj-Ar-3Lk"/>
-                            <constraint firstItem="sNL-a1-yda" firstAttribute="width" secondItem="g2o-Pa-rkh" secondAttribute="width" id="OCG-Yr-ZMp"/>
-                            <constraint firstItem="sNL-a1-yda" firstAttribute="centerX" secondItem="g2o-Pa-rkh" secondAttribute="centerX" id="OWe-c8-bQ1"/>
-                            <constraint firstItem="sNL-a1-yda" firstAttribute="top" secondItem="8cA-8n-RvZ" secondAttribute="top" id="Oag-ny-U5H"/>
-                            <constraint firstItem="g2o-Pa-rkh" firstAttribute="leading" secondItem="DaO-Dt-ez3" secondAttribute="leading" id="bK1-11-9dK"/>
-                            <constraint firstItem="g2o-Pa-rkh" firstAttribute="height" secondItem="DaO-Dt-ez3" secondAttribute="height" multiplier="0.1" id="dhn-FC-PE9"/>
-                            <constraint firstItem="sNL-a1-yda" firstAttribute="bottom" secondItem="g2o-Pa-rkh" secondAttribute="bottom" constant="-8" id="hO9-kU-cxh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8cA-8n-RvZ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="homeButton" id="Iup-GQ-vd2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WIV-5X-oWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="HomePage" id="uQS-1Z-95L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jYh-Sg-MKa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ecy-HC-dSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2395.6521739130435" y="128.57142857142856"/>
+            <point key="canvasLocation" x="2393" y="-336"/>
         </scene>
-        <!--Featured-->
-        <scene sceneID="QeG-On-Una">
+        <!--FeaturedPage-->
+        <scene sceneID="kK5-0a-UBV">
             <objects>
-                <viewController id="gKk-rf-bqN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EwB-hS-YHi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="UdV-EF-b2z">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="tTn-WM-3Ui">
-                                <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="tTn-WM-3Ui" firstAttribute="centerX" secondItem="UdV-EF-b2z" secondAttribute="centerX" id="6F6-Zb-oUM"/>
-                            <constraint firstItem="tTn-WM-3Ui" firstAttribute="width" secondItem="UdV-EF-b2z" secondAttribute="width" id="C8t-PP-n0N"/>
-                            <constraint firstItem="UdV-EF-b2z" firstAttribute="trailing" secondItem="Cv1-dO-tXm" secondAttribute="trailing" id="NSW-mg-H38"/>
-                            <constraint firstItem="tTn-WM-3Ui" firstAttribute="top" secondItem="Cv1-dO-tXm" secondAttribute="top" id="XOi-ZM-ULq"/>
-                            <constraint firstItem="tTn-WM-3Ui" firstAttribute="bottom" secondItem="UdV-EF-b2z" secondAttribute="bottom" constant="-8" id="XxK-00-rbG"/>
-                            <constraint firstItem="UdV-EF-b2z" firstAttribute="top" secondItem="EwB-hS-YHi" secondAttribute="top" id="inG-xS-BVE"/>
-                            <constraint firstItem="UdV-EF-b2z" firstAttribute="height" secondItem="EwB-hS-YHi" secondAttribute="height" multiplier="0.1" id="lzj-bv-Dos"/>
-                            <constraint firstItem="UdV-EF-b2z" firstAttribute="leading" secondItem="Cv1-dO-tXm" secondAttribute="leading" id="xEH-xP-EEn"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Cv1-dO-tXm"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Featured" image="featuredButton" id="9fb-Mc-57n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HM9-up-2aT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="FeaturedPage" id="kjT-yH-rEe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tM1-dM-nrJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kl3-lb-iLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3126.0869565217395" y="128.57142857142856"/>
+            <point key="canvasLocation" x="2551" y="-336"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="gd1-nw-y2X">
+        <!--SearchPage-->
+        <scene sceneID="19Q-uc-pFF">
             <objects>
-                <viewController id="zmn-AX-Ckf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AAD-bD-LPa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="AQG-WK-zF4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="FMb-vh-cf3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="AQG-WK-zF4" firstAttribute="height" secondItem="AAD-bD-LPa" secondAttribute="height" multiplier="0.1" id="KZI-UN-4KS"/>
-                            <constraint firstItem="FMb-vh-cf3" firstAttribute="top" secondItem="S8o-VJ-sYl" secondAttribute="top" id="Klc-as-wxF"/>
-                            <constraint firstItem="AQG-WK-zF4" firstAttribute="trailing" secondItem="S8o-VJ-sYl" secondAttribute="trailing" id="USp-xO-ENH"/>
-                            <constraint firstItem="FMb-vh-cf3" firstAttribute="bottom" secondItem="AQG-WK-zF4" secondAttribute="bottom" constant="-8" id="Vl3-hN-B3X"/>
-                            <constraint firstItem="AQG-WK-zF4" firstAttribute="leading" secondItem="S8o-VJ-sYl" secondAttribute="leading" id="ZHl-aw-dI2"/>
-                            <constraint firstItem="FMb-vh-cf3" firstAttribute="centerX" secondItem="AQG-WK-zF4" secondAttribute="centerX" id="aRK-a4-JmT"/>
-                            <constraint firstItem="FMb-vh-cf3" firstAttribute="width" secondItem="AQG-WK-zF4" secondAttribute="width" id="wSG-Dy-ia3"/>
-                            <constraint firstItem="AQG-WK-zF4" firstAttribute="top" secondItem="AAD-bD-LPa" secondAttribute="top" id="yh3-Xa-xAR"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="S8o-VJ-sYl"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="searchButton" id="Ztu-cL-Ock"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="drt-g6-LeC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="SearchPage" id="O2H-qs-EUq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="R3C-GJ-m1c"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="he1-be-uoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3844.9275362318845" y="128.57142857142856"/>
+            <point key="canvasLocation" x="2721" y="-336"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P10-RC-qEs">
@@ -234,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgF-Ke-BB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4528.985507246377" y="128.57142857142856"/>
+            <point key="canvasLocation" x="3845" y="873"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eNs-x4-dpr">
@@ -249,27 +127,21 @@
                         <color key="selectedImageTintColor" name="secondaryColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Mqs-ND-HlQ" kind="relationship" relationship="viewControllers" id="CSl-gz-xGI"/>
-                        <segue destination="QMm-7z-28x" kind="relationship" relationship="viewControllers" id="4EI-0f-Fqm"/>
-                        <segue destination="7bC-73-0Vx" kind="relationship" relationship="viewControllers" id="bLl-Qi-ngS"/>
-                        <segue destination="gKk-rf-bqN" kind="relationship" relationship="viewControllers" id="nNl-xz-lOp"/>
-                        <segue destination="zmn-AX-Ckf" kind="relationship" relationship="viewControllers" id="aEV-ff-Ecw"/>
+                        <segue destination="ZNO-sw-0DC" kind="relationship" relationship="viewControllers" id="nba-Fo-0h1"/>
+                        <segue destination="Mp5-hY-LQd" kind="relationship" relationship="viewControllers" id="wUi-Nb-UN7"/>
+                        <segue destination="uQS-1Z-95L" kind="relationship" relationship="viewControllers" id="fcg-qJ-Gzy"/>
+                        <segue destination="kjT-yH-rEe" kind="relationship" relationship="viewControllers" id="Gr6-lY-9F5"/>
+                        <segue destination="O2H-qs-EUq" kind="relationship" relationship="viewControllers" id="goI-r7-8MJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meP-E0-Gyp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="-596"/>
+            <point key="canvasLocation" x="2394" y="-773"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="375" height="812"/>
-        <image name="featuredButton" width="25" height="25"/>
-        <image name="homeButton" width="25" height="25"/>
-        <image name="listButton" width="25" height="25"/>
-        <image name="logoHorizontal" width="179.5" height="43"/>
         <image name="logoVertical" width="213" height="223"/>
-        <image name="pantryButton" width="25" height="25"/>
-        <image name="searchButton" width="25" height="25"/>
         <namedColor name="primaryBGColor">
             <color red="0.2669999897480011" green="1" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
