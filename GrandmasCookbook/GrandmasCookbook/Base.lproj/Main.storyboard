@@ -99,21 +99,6 @@
             </objects>
             <point key="canvasLocation" x="2721" y="-336"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="P10-RC-qEs">
-            <objects>
-                <viewController id="uzd-o0-akd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dG2-4J-Eaw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="USm-fO-FHc"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LgF-Ke-BB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3845" y="873"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eNs-x4-dpr">
             <objects>
