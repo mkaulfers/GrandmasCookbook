@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>284308804822-pplt5vv2sgo6t5v6dbn61if1qk7fv26r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.284308804822-pplt5vv2sgo6t5v6dbn61if1qk7fv26r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCtLnNwWZ19f-Y2vLrl4DtLQBIJ_umQFxE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>284308804822</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>KaulfersMatthew.GrandmasCookbook</string>
+	<key>PROJECT_ID</key>
+	<string>grandma-s-cookbook-5a67b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>grandma-s-cookbook-5a67b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:284308804822:ios:fbee4f95702f26df852577</string>
+	<key>DATABASE_URL</key>
+	<string>https://grandma-s-cookbook-5a67b.firebaseio.com</string>
+</dict>
+</plist>

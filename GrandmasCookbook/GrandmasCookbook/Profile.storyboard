@@ -113,6 +113,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C5T-vz-aJD"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="fZx-U6-1e4" id="EjF-Dm-DMt"/>
+                        <outlet property="errorLabel" destination="q87-UT-Krb" id="W08-4P-g0b"/>
+                        <outlet property="passwordTextField" destination="aNK-hq-ZPg" id="oFZ-fz-Uxs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1a-pZ-mSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="59s-Ka-m53" userLabel="LogInButtton">
@@ -149,39 +154,44 @@
                                 <rect key="frame" x="91" y="150.66666666666666" width="232" height="186.99999999999997"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PsV-Uk-uds">
-                                <rect key="frame" x="91" y="376.66666666666674" width="232" height="411"/>
+                                <rect key="frame" x="91" y="376.66666666666674" width="232" height="446.33333333333326"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdr-y9-04t">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaB-lZ-Gk3">
-                                        <rect key="frame" x="0.0" y="0.0" width="232" height="34"/>
+                                        <rect key="frame" x="0.0" y="35.333333333333314" width="232" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POq-7w-QJe">
-                                        <rect key="frame" x="0.0" y="49" width="232" height="34"/>
+                                        <rect key="frame" x="0.0" y="84.333333333333314" width="232" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ems-5p-mdo">
-                                        <rect key="frame" x="0.0" y="98" width="232" height="34"/>
+                                        <rect key="frame" x="0.0" y="133.33333333333331" width="232" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqx-lI-70u">
-                                        <rect key="frame" x="0.0" y="146.99999999999994" width="232" height="34"/>
+                                        <rect key="frame" x="0.0" y="182.33333333333331" width="232" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Doq-PY-xgG">
-                                        <rect key="frame" x="0.0" y="195.99999999999994" width="232" height="68"/>
+                                        <rect key="frame" x="0.0" y="231.33333333333331" width="232" height="68"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerButton" translatesAutoresizingMaskIntoConstraints="NO" id="XrB-Wa-TQc">
-                                        <rect key="frame" x="0.0" y="278.99999999999994" width="232" height="132"/>
+                                        <rect key="frame" x="0.0" y="314.33333333333331" width="232" height="132"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="uX6-gm-gt8" appends="YES" id="6X1-4g-dlk"/>
-                                            <outletCollection property="gestureRecognizers" destination="uX6-gm-gt8" appends="YES" id="Kl8-EI-5iz"/>
+                                            <outletCollection property="gestureRecognizers" destination="JSu-wd-iCl" appends="YES" id="bhF-ex-XUB"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -207,11 +217,19 @@
                         <viewLayoutGuide key="safeArea" id="87u-k8-qiM"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lnb-Wg-AFu"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="ems-5p-mdo" id="9vj-57-8cP"/>
+                        <outlet property="emailTextField" destination="TaB-lZ-Gk3" id="S02-HB-Zv4"/>
+                        <outlet property="errorLabel" destination="tdr-y9-04t" id="mbE-yF-lGI"/>
+                        <outlet property="firstNameTextField" destination="jqx-lI-70u" id="YDc-ef-NXN"/>
+                        <outlet property="lastNameTextField" destination="Doq-PY-xgG" id="Mw4-mi-aqA"/>
+                        <outlet property="passwordTextField" destination="POq-7w-QJe" id="8i5-53-V7d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3j-ij-s9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="uX6-gm-gt8" userLabel="registerButton">
+                <tapGestureRecognizer id="JSu-wd-iCl">
                     <connections>
-                        <segue destination="CSL-yc-ICg" kind="presentation" modalPresentationStyle="fullScreen" id="c0e-Yv-wZg"/>
+                        <action selector="registerButtonSelected:" destination="obJ-KO-C1Z" id="vSz-iX-1V2"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -312,7 +330,4 @@
             <color red="0.24699999392032623" green="0.18000000715255737" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="RrV-kc-RaU"/>
-    </inferredMetricsTieBreakers>
 </document>

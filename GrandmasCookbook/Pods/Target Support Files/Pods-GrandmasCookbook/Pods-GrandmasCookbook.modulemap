@@ -1,0 +1,6 @@
+framework module Pods_GrandmasCookbook {
+  umbrella header "Pods-GrandmasCookbook-umbrella.h"
+
+  export *
+  module * { export * }
+}
