@@ -11,9 +11,6 @@
         <array key="Cassandra Personal Use.ttf">
             <string>CassandraPersonalUse-Regular</string>
         </array>
-        <array key="GothamRounded-BookItalic.otf">
-            <string>GothamRounded-BookItalic</string>
-        </array>
         <array key="GothamRoundedBook_21018.ttf">
             <string>GothamRounded-Book</string>
         </array>
@@ -37,6 +34,9 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="primaryTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="ZK2-c8-0dn" eventType="touchUpInside" id="ArN-5B-Tcl"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoVertical" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-QJ-Rs6">
                                 <rect key="frame" x="91" y="150.66666666666666" width="232" height="186.99999999999997"/>
@@ -51,65 +51,61 @@
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logInButton" translatesAutoresizingMaskIntoConstraints="NO" id="dR7-Ui-KJn">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logInButton" translatesAutoresizingMaskIntoConstraints="NO" id="dR7-Ui-KJn">
                                 <rect key="frame" x="0.0" y="473.66666666666669" width="414" height="66.000000000000057"/>
-                            </imageView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member? Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NW0-vQ-sHP">
-                                <rect key="frame" x="153" y="537" width="170" height="16.333333333333371"/>
                                 <gestureRecognizers/>
-                                <fontDescription key="fontDescription" name="GothamRounded-BookItalic" family="Gotham Rounded" pointSize="14"/>
-                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="SNn-Og-2hd" appends="YES" id="rZ1-fi-eWP"/>
+                                    <outletCollection property="gestureRecognizers" destination="59s-Ka-m53" appends="YES" id="U9M-JO-9dC"/>
                                 </connections>
-                            </label>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Username/Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q87-UT-Krb">
                                 <rect key="frame" x="105" y="354" width="193" height="15"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="14"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebookButton" translatesAutoresizingMaskIntoConstraints="NO" id="vBz-hw-dCc">
-                                <rect key="frame" x="119.66666666666669" y="561.33333333333337" width="75" height="75"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebookButton" translatesAutoresizingMaskIntoConstraints="NO" id="vBz-hw-dCc">
+                                <rect key="frame" x="119.66666666666669" y="559.33333333333337" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleButton" translatesAutoresizingMaskIntoConstraints="NO" id="0Yd-Bx-Fyb">
-                                <rect key="frame" x="219.66666666666663" y="561.33333333333337" width="75" height="75"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googleButton" translatesAutoresizingMaskIntoConstraints="NO" id="0Yd-Bx-Fyb">
+                                <rect key="frame" x="219.66666666666663" y="559.33333333333337" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJW-Ve-XiF">
+                                <rect key="frame" x="98" y="531" width="218" height="30"/>
+                                <state key="normal" title="Not a member? Click to register"/>
+                                <connections>
+                                    <segue destination="obJ-KO-C1Z" kind="presentation" modalPresentationStyle="fullScreen" id="19S-Tc-Lx5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="vBz-hw-dCc" firstAttribute="centerX" secondItem="dR7-Ui-KJn" secondAttribute="centerX" constant="-50" id="0D2-rE-C9p"/>
                             <constraint firstItem="aNK-hq-ZPg" firstAttribute="height" secondItem="dR7-Ui-KJn" secondAttribute="height" multiplier="0.545455" id="2Ul-cs-u5V"/>
                             <constraint firstItem="KCK-QJ-Rs6" firstAttribute="centerX" secondItem="IDJ-GT-qAD" secondAttribute="centerX" id="3D9-7f-5Hz"/>
                             <constraint firstItem="dR7-Ui-KJn" firstAttribute="leading" secondItem="IDJ-GT-qAD" secondAttribute="leading" id="5p1-ue-cIM"/>
                             <constraint firstItem="fZx-U6-1e4" firstAttribute="width" secondItem="aNK-hq-ZPg" secondAttribute="width" id="6lj-v9-Uyc"/>
                             <constraint firstItem="q87-UT-Krb" firstAttribute="leading" secondItem="C5T-vz-aJD" secondAttribute="leading" constant="105" id="79B-M7-Nza"/>
                             <constraint firstItem="aNK-hq-ZPg" firstAttribute="centerX" secondItem="dR7-Ui-KJn" secondAttribute="centerX" id="9nT-06-d1b"/>
-                            <constraint firstItem="vBz-hw-dCc" firstAttribute="width" secondItem="dR7-Ui-KJn" secondAttribute="width" multiplier="0.181159" id="A9M-pG-AEk"/>
                             <constraint firstItem="C5T-vz-aJD" firstAttribute="trailing" secondItem="q87-UT-Krb" secondAttribute="trailing" constant="116" id="Bvt-mh-jly"/>
                             <constraint firstItem="KCK-QJ-Rs6" firstAttribute="height" secondItem="IDJ-GT-qAD" secondAttribute="height" multiplier="0.208705" id="HVY-lF-18P"/>
                             <constraint firstItem="fZx-U6-1e4" firstAttribute="height" secondItem="aNK-hq-ZPg" secondAttribute="height" multiplier="1.01389" id="IIb-Lx-7MP"/>
                             <constraint firstItem="dR7-Ui-KJn" firstAttribute="centerY" secondItem="IDJ-GT-qAD" secondAttribute="centerY" constant="58.5" id="JAM-U9-SHo"/>
                             <constraint firstItem="KCK-QJ-Rs6" firstAttribute="centerY" secondItem="IDJ-GT-qAD" secondAttribute="centerY" constant="-204" id="KOn-PJ-4R7"/>
+                            <constraint firstItem="bJW-Ve-XiF" firstAttribute="top" secondItem="dR7-Ui-KJn" secondAttribute="bottom" constant="-8.6666666666667425" id="LH1-mB-lRj"/>
                             <constraint firstItem="fZx-U6-1e4" firstAttribute="centerX" secondItem="aNK-hq-ZPg" secondAttribute="centerX" id="MtU-Bs-rjK"/>
                             <constraint firstItem="dR7-Ui-KJn" firstAttribute="height" secondItem="IDJ-GT-qAD" secondAttribute="height" multiplier="0.0736607" id="Q86-QR-VMq"/>
                             <constraint firstItem="dR7-Ui-KJn" firstAttribute="trailing" secondItem="IDJ-GT-qAD" secondAttribute="trailing" id="QJB-SW-8ko"/>
-                            <constraint firstItem="0Yd-Bx-Fyb" firstAttribute="top" secondItem="NW0-vQ-sHP" secondAttribute="bottom" constant="8" id="Rug-MP-g9g"/>
-                            <constraint firstItem="NW0-vQ-sHP" firstAttribute="leading" secondItem="C5T-vz-aJD" secondAttribute="leading" constant="153" id="S8Q-Xu-sL9"/>
-                            <constraint firstItem="0Yd-Bx-Fyb" firstAttribute="width" secondItem="dR7-Ui-KJn" secondAttribute="width" multiplier="0.181159" id="Tmg-25-F2H"/>
-                            <constraint firstItem="0Yd-Bx-Fyb" firstAttribute="centerX" secondItem="dR7-Ui-KJn" secondAttribute="centerX" constant="50" id="VQn-9P-h9R"/>
-                            <constraint firstItem="0Yd-Bx-Fyb" firstAttribute="height" secondItem="dR7-Ui-KJn" secondAttribute="height" multiplier="1.13636" id="VlS-o4-sb8"/>
+                            <constraint firstItem="bJW-Ve-XiF" firstAttribute="centerX" secondItem="dR7-Ui-KJn" secondAttribute="centerX" id="RZi-ca-Q76"/>
+                            <constraint firstItem="bJW-Ve-XiF" firstAttribute="width" secondItem="dR7-Ui-KJn" secondAttribute="width" multiplier="0.52657" id="W96-sY-nFu"/>
                             <constraint firstItem="IDJ-GT-qAD" firstAttribute="leading" secondItem="1Ci-OY-TTZ" secondAttribute="leading" id="ZA6-a0-6YW"/>
                             <constraint firstItem="aNK-hq-ZPg" firstAttribute="width" secondItem="dR7-Ui-KJn" secondAttribute="width" multiplier="0.59" id="aST-h7-7vz"/>
                             <constraint firstItem="fZx-U6-1e4" firstAttribute="top" secondItem="q87-UT-Krb" secondAttribute="bottom" constant="8" id="efB-aJ-h06"/>
+                            <constraint firstItem="bJW-Ve-XiF" firstAttribute="height" secondItem="dR7-Ui-KJn" secondAttribute="height" multiplier="0.454545" id="fXp-6u-0gI"/>
                             <constraint firstItem="q87-UT-Krb" firstAttribute="top" secondItem="KCK-QJ-Rs6" secondAttribute="bottom" constant="16.5" id="gx3-2d-vHj"/>
                             <constraint firstAttribute="bottom" secondItem="IDJ-GT-qAD" secondAttribute="bottom" id="hYo-X6-ZeG"/>
-                            <constraint firstItem="NW0-vQ-sHP" firstAttribute="top" secondItem="aNK-hq-ZPg" secondAttribute="bottom" constant="71.5" id="hmp-Qy-4mQ"/>
                             <constraint firstItem="aNK-hq-ZPg" firstAttribute="top" secondItem="fZx-U6-1e4" secondAttribute="bottom" constant="16" id="i5c-Gw-OVA"/>
-                            <constraint firstItem="vBz-hw-dCc" firstAttribute="top" secondItem="NW0-vQ-sHP" secondAttribute="bottom" constant="8" id="mqz-Z8-Vz4"/>
-                            <constraint firstItem="C5T-vz-aJD" firstAttribute="trailing" secondItem="NW0-vQ-sHP" secondAttribute="trailing" constant="91" id="n7X-7V-fco"/>
-                            <constraint firstItem="vBz-hw-dCc" firstAttribute="height" secondItem="dR7-Ui-KJn" secondAttribute="height" multiplier="1.13636" id="oyo-ul-j6c"/>
                             <constraint firstItem="dR7-Ui-KJn" firstAttribute="top" secondItem="aNK-hq-ZPg" secondAttribute="bottom" constant="8" id="qLa-to-fuZ"/>
                             <constraint firstItem="KCK-QJ-Rs6" firstAttribute="width" secondItem="IDJ-GT-qAD" secondAttribute="width" multiplier="0.560386" id="w6e-Lt-GHS"/>
                             <constraint firstItem="IDJ-GT-qAD" firstAttribute="top" secondItem="1Ci-OY-TTZ" secondAttribute="top" id="xOH-II-yS1"/>
@@ -119,13 +115,13 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1a-pZ-mSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="SNn-Og-2hd">
+                <tapGestureRecognizer id="59s-Ka-m53" userLabel="LogInButtton">
                     <connections>
-                        <segue destination="obJ-KO-C1Z" kind="presentation" modalPresentationStyle="fullScreen" id="Rd8-gH-OiU"/>
+                        <segue destination="CSL-yc-ICg" kind="presentation" modalPresentationStyle="fullScreen" id="RrV-kc-RaU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="678" y="-250"/>
+            <point key="canvasLocation" x="264" y="-553"/>
         </scene>
         <!--Register-->
         <scene sceneID="0AH-94-IFR">
@@ -145,6 +141,9 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="primaryTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="obJ-KO-C1Z" eventType="touchUpInside" id="wRa-Kh-hj3"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoVertical" translatesAutoresizingMaskIntoConstraints="NO" id="NbN-P5-bYM">
                                 <rect key="frame" x="91" y="150.66666666666666" width="232" height="186.99999999999997"/>
@@ -177,8 +176,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerButton" translatesAutoresizingMaskIntoConstraints="NO" id="XrB-Wa-TQc">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerButton" translatesAutoresizingMaskIntoConstraints="NO" id="XrB-Wa-TQc">
                                         <rect key="frame" x="0.0" y="278.99999999999994" width="232" height="132"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="uX6-gm-gt8" appends="YES" id="6X1-4g-dlk"/>
+                                            <outletCollection property="gestureRecognizers" destination="uX6-gm-gt8" appends="YES" id="Kl8-EI-5iz"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -205,8 +209,13 @@
                     <navigationItem key="navigationItem" id="Lnb-Wg-AFu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3j-ij-s9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uX6-gm-gt8" userLabel="registerButton">
+                    <connections>
+                        <segue destination="CSL-yc-ICg" kind="presentation" modalPresentationStyle="fullScreen" id="c0e-Yv-wZg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1346" y="-250"/>
+            <point key="canvasLocation" x="1259" y="-61"/>
         </scene>
         <!--Register-->
         <scene sceneID="2eP-Md-7tV">
@@ -226,6 +235,9 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="primaryTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="CSL-yc-ICg" eventType="touchUpInside" id="uf8-RY-3r4"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QDq-hV-vFF">
                                 <rect key="frame" x="91" y="151.66666666666669" width="232" height="185.66666666666669"/>
@@ -283,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFD-C0-nTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013" y="-250"/>
+            <point key="canvasLocation" x="2262" y="-373"/>
         </scene>
     </scenes>
     <resources>
@@ -300,4 +312,7 @@
             <color red="0.24699999392032623" green="0.18000000715255737" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RrV-kc-RaU"/>
+    </inferredMetricsTieBreakers>
 </document>
