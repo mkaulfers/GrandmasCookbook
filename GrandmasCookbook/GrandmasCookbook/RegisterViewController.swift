@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -45,8 +47,13 @@ class RegisterViewController: UIViewController {
         }
         else
         {
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             //Create the user
-            Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>) { (result, err) in
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 
                 //INFO: Check for errors
                 if err != nil {
@@ -56,14 +63,35 @@ class RegisterViewController: UIViewController {
                 else{
                     //INFO: User was created successfully.
                     //TODO: - STOPPED HERE ADDING FIRESTORE (USER)
+                    let db = Firestore.firestore()
+                    
+                    db.collection("users").addDocument(data: ["firstName": firstName, "lastName": lastName, "uid": result!.user.uid]) {(error) in
+                        
+                        if error != nil
+                        {
+                            self.showError("Error saving user data to database.")
+                        }
+                    }
+                    
+                    //Transition to profile page
+                    self.transitionToProfile()
                 }
             }
             
-            //Transition to profile page
+            
         }
     }
     
     //MARK: - Custom Methods
+    
+    func transitionToProfile()
+    {
+        let profileViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.profileViewController) as? ProfileViewController
+        
+        //INFO: Set the root view controller, make root visible.
+        view.window?.rootViewController = profileViewController
+        view.window?.makeKeyAndVisible()
+    }
     
     func showError(_ message: String)
     {
@@ -118,7 +146,7 @@ class RegisterViewController: UIViewController {
     
     func isEmailValid(_ email: String) -> Bool
     {
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", "\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b")
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
         return emailTest.evaluate(with: email)
     }
     
