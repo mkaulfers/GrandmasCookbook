@@ -9,9 +9,23 @@
 /* Begin PBXBuildFile section */
 		AE4554B323F8905800D016B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE4554B223F8905800D016B8 /* GoogleService-Info.plist */; };
 		AE7E11EF23F9B640003969D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7E11EE23F9B640003969D8 /* Utilities.swift */; };
-		AE90C3EE23F747C000F3E0E8 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AE90C3ED23F747C000F3E0E8 /* fonts */; };
 		AE90C3F023F74AC800F3E0E8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */; };
 		AE90C3F223F74D0D00F3E0E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */; };
+		AEC2A20E23F9F0F100A956DD /* reusableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2A20D23F9F0F100A956DD /* reusableHeader.swift */; };
+		AEC2A21023F9F11000A956DD /* reusableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A20F23F9F11000A956DD /* reusableHeader.xib */; };
+		AEC2A22123F9FA0C00A956DD /* GothamRounded-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21423F9FA0A00A956DD /* GothamRounded-Book.otf */; };
+		AEC2A22223F9FA0C00A956DD /* GothamRounded-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21523F9FA0A00A956DD /* GothamRounded-MediumItalic.otf */; };
+		AEC2A22323F9FA0C00A956DD /* GothamRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21623F9FA0A00A956DD /* GothamRounded-Medium.otf */; };
+		AEC2A22423F9FA0C00A956DD /* GothamRounded-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21723F9FA0A00A956DD /* GothamRounded-BoldItalic.otf */; };
+		AEC2A22523F9FA0C00A956DD /* Cassandra Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21823F9FA0A00A956DD /* Cassandra Personal Use.ttf */; };
+		AEC2A22623F9FA0C00A956DD /* GothamRoundedBook_21018.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21923F9FA0A00A956DD /* GothamRoundedBook_21018.ttf */; };
+		AEC2A22723F9FA0C00A956DD /* GothamRounded-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21A23F9FA0B00A956DD /* GothamRounded-BookItalic.otf */; };
+		AEC2A22823F9FA0C00A956DD /* GothamRounded-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21B23F9FA0B00A956DD /* GothamRounded-LightItalic.otf */; };
+		AEC2A22923F9FA0C00A956DD /* GothamRoundedLight_21020.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21C23F9FA0B00A956DD /* GothamRoundedLight_21020.ttf */; };
+		AEC2A22A23F9FA0C00A956DD /* GothamRoundedMedium_21022.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21D23F9FA0B00A956DD /* GothamRoundedMedium_21022.ttf */; };
+		AEC2A22B23F9FA0C00A956DD /* GothamRounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21E23F9FA0B00A956DD /* GothamRounded-Light.otf */; };
+		AEC2A22C23F9FA0C00A956DD /* GothamRoundedBold_21016.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21F23F9FA0C00A956DD /* GothamRoundedBold_21016.ttf */; };
+		AEC2A22D23F9FA0C00A956DD /* GothamRounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A22023F9FA0C00A956DD /* GothamRounded-Bold.otf */; };
 		AECE07F423F4A4EE0048060D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE07F323F4A4EE0048060D /* AppDelegate.swift */; };
 		AECE07F623F4A4EE0048060D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE07F523F4A4EE0048060D /* SceneDelegate.swift */; };
 		AECE07F823F4A4EE0048060D /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE07F723F4A4EE0048060D /* LoadingScreen.swift */; };
@@ -39,10 +53,24 @@
 		8653F2AA4D88101D200563D6 /* Pods_GrandmasCookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrandmasCookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4554B223F8905800D016B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE7E11EE23F9B640003969D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		AE90C3ED23F747C000F3E0E8 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AE9D405723F6F575009D6260 /* GrandmasCookbook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrandmasCookbook-Bridging-Header.h"; sourceTree = "<group>"; };
+		AEC2A20D23F9F0F100A956DD /* reusableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reusableHeader.swift; sourceTree = "<group>"; };
+		AEC2A20F23F9F11000A956DD /* reusableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reusableHeader.xib; sourceTree = "<group>"; };
+		AEC2A21423F9FA0A00A956DD /* GothamRounded-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Book.otf"; sourceTree = "<group>"; };
+		AEC2A21523F9FA0A00A956DD /* GothamRounded-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-MediumItalic.otf"; sourceTree = "<group>"; };
+		AEC2A21623F9FA0A00A956DD /* GothamRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Medium.otf"; sourceTree = "<group>"; };
+		AEC2A21723F9FA0A00A956DD /* GothamRounded-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-BoldItalic.otf"; sourceTree = "<group>"; };
+		AEC2A21823F9FA0A00A956DD /* Cassandra Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cassandra Personal Use.ttf"; sourceTree = "<group>"; };
+		AEC2A21923F9FA0A00A956DD /* GothamRoundedBook_21018.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedBook_21018.ttf; sourceTree = "<group>"; };
+		AEC2A21A23F9FA0B00A956DD /* GothamRounded-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-BookItalic.otf"; sourceTree = "<group>"; };
+		AEC2A21B23F9FA0B00A956DD /* GothamRounded-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-LightItalic.otf"; sourceTree = "<group>"; };
+		AEC2A21C23F9FA0B00A956DD /* GothamRoundedLight_21020.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedLight_21020.ttf; sourceTree = "<group>"; };
+		AEC2A21D23F9FA0B00A956DD /* GothamRoundedMedium_21022.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedMedium_21022.ttf; sourceTree = "<group>"; };
+		AEC2A21E23F9FA0B00A956DD /* GothamRounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Light.otf"; sourceTree = "<group>"; };
+		AEC2A21F23F9FA0C00A956DD /* GothamRoundedBold_21016.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedBold_21016.ttf; sourceTree = "<group>"; };
+		AEC2A22023F9FA0C00A956DD /* GothamRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Bold.otf"; sourceTree = "<group>"; };
 		AECE07F023F4A4ED0048060D /* GrandmasCookbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrandmasCookbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECE07F323F4A4EE0048060D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AECE07F523F4A4EE0048060D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +173,35 @@
 			name = AddRecipePage;
 			sourceTree = "<group>";
 		};
+		AEC2A21123F9F50B00A956DD /* Custom XIB's */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2A20F23F9F11000A956DD /* reusableHeader.xib */,
+				AEC2A20D23F9F0F100A956DD /* reusableHeader.swift */,
+			);
+			name = "Custom XIB's";
+			sourceTree = "<group>";
+		};
+		AEC2A21323F9F9F800A956DD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2A21823F9FA0A00A956DD /* Cassandra Personal Use.ttf */,
+				AEC2A22023F9FA0C00A956DD /* GothamRounded-Bold.otf */,
+				AEC2A21723F9FA0A00A956DD /* GothamRounded-BoldItalic.otf */,
+				AEC2A21423F9FA0A00A956DD /* GothamRounded-Book.otf */,
+				AEC2A21A23F9FA0B00A956DD /* GothamRounded-BookItalic.otf */,
+				AEC2A21E23F9FA0B00A956DD /* GothamRounded-Light.otf */,
+				AEC2A21B23F9FA0B00A956DD /* GothamRounded-LightItalic.otf */,
+				AEC2A21623F9FA0A00A956DD /* GothamRounded-Medium.otf */,
+				AEC2A21523F9FA0A00A956DD /* GothamRounded-MediumItalic.otf */,
+				AEC2A21F23F9FA0C00A956DD /* GothamRoundedBold_21016.ttf */,
+				AEC2A21923F9FA0A00A956DD /* GothamRoundedBook_21018.ttf */,
+				AEC2A21C23F9FA0B00A956DD /* GothamRoundedLight_21020.ttf */,
+				AEC2A21D23F9FA0B00A956DD /* GothamRoundedMedium_21022.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		AECE07E723F4A4ED0048060D = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +234,9 @@
 				AE9D405D23F6F5A6009D6260 /* ShoppingListPage */,
 				AE9D405C23F6F599009D6260 /* PantryPage */,
 				AE7E11ED23F9B61F003969D8 /* Utitlities */,
+				AEC2A21123F9F50B00A956DD /* Custom XIB's */,
 				AECE07FF23F4A4F00048060D /* Assets.xcassets */,
-				AE90C3ED23F747C000F3E0E8 /* fonts */,
+				AEC2A21323F9F9F800A956DD /* Fonts */,
 				AECE080423F4A4F00048060D /* Info.plist */,
 				AE4554B223F8905800D016B8 /* GoogleService-Info.plist */,
 				AECE07FC23F4A4EE0048060D /* GrandmasCookbook.xcdatamodeld */,
@@ -277,14 +335,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE90C3EE23F747C000F3E0E8 /* fonts in Resources */,
+				AEC2A22723F9FA0C00A956DD /* GothamRounded-BookItalic.otf in Resources */,
+				AEC2A22A23F9FA0C00A956DD /* GothamRoundedMedium_21022.ttf in Resources */,
 				AED3F02D23F72F0A00E5C7B9 /* SearchPage.storyboard in Resources */,
 				AED3F02923F72EA900E5C7B9 /* HomePage.storyboard in Resources */,
 				AED3F03123F741D200E5C7B9 /* Profile.storyboard in Resources */,
+				AEC2A22323F9FA0C00A956DD /* GothamRounded-Medium.otf in Resources */,
 				AECE080023F4A4F00048060D /* Assets.xcassets in Resources */,
+				AEC2A22823F9FA0C00A956DD /* GothamRounded-LightItalic.otf in Resources */,
+				AEC2A22623F9FA0C00A956DD /* GothamRoundedBook_21018.ttf in Resources */,
 				AECE07FB23F4A4EE0048060D /* Main.storyboard in Resources */,
+				AEC2A22523F9FA0C00A956DD /* Cassandra Personal Use.ttf in Resources */,
+				AEC2A22123F9FA0C00A956DD /* GothamRounded-Book.otf in Resources */,
+				AEC2A22C23F9FA0C00A956DD /* GothamRoundedBold_21016.ttf in Resources */,
+				AEC2A22223F9FA0C00A956DD /* GothamRounded-MediumItalic.otf in Resources */,
+				AEC2A22423F9FA0C00A956DD /* GothamRounded-BoldItalic.otf in Resources */,
+				AEC2A21023F9F11000A956DD /* reusableHeader.xib in Resources */,
+				AEC2A22B23F9FA0C00A956DD /* GothamRounded-Light.otf in Resources */,
 				AED3F02723F72E5100E5C7B9 /* ShoppingList.storyboard in Resources */,
 				AE4554B323F8905800D016B8 /* GoogleService-Info.plist in Resources */,
+				AEC2A22D23F9FA0C00A956DD /* GothamRounded-Bold.otf in Resources */,
+				AEC2A22923F9FA0C00A956DD /* GothamRoundedLight_21020.ttf in Resources */,
 				AED3F02523F72DA600E5C7B9 /* Pantry.storyboard in Resources */,
 				AED3F02B23F72EE400E5C7B9 /* FeaturedPage.storyboard in Resources */,
 			);
@@ -341,6 +412,7 @@
 			files = (
 				AECE07F823F4A4EE0048060D /* LoadingScreen.swift in Sources */,
 				AE90C3F023F74AC800F3E0E8 /* RegisterViewController.swift in Sources */,
+				AEC2A20E23F9F0F100A956DD /* reusableHeader.swift in Sources */,
 				AED3F01C23F72C5700E5C7B9 /* HomePageViewController.swift in Sources */,
 				AECE07FE23F4A4EE0048060D /* GrandmasCookbook.xcdatamodeld in Sources */,
 				AED3F02023F72C6600E5C7B9 /* SearchViewController.swift in Sources */,

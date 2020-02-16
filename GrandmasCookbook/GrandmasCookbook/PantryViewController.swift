@@ -8,23 +8,43 @@
 
 import UIKit
 
-class PantryViewController: UIViewController {
-
+class PantryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    //MARK: - Class Vars and Outlets
+    @IBOutlet var pantryTableView: UITableView!
+    
+    //MARK: - Parent ViewController Management
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //INFO: Load the header view.
+        let headerNib = UINib.init(nibName: "reusableHeader", bundle: Bundle.main)
+        pantryTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "reusableHeader")
+        
+        //INFO: Hide the separator
+        pantryTableView.separatorColor = .clear
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Table View Management
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let headerView = pantryTableView.dequeueReusableHeaderFooterView(withIdentifier: "reusableHeader") as! reusableHeader
+        return headerView.bounds.size.height
     }
-    */
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = pantryTableView.dequeueReusableHeaderFooterView(withIdentifier: "reusableHeader") as! reusableHeader
+        
+        headerView.HeaderText.text = "Pantry"
+        
+        return headerView
+    }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
 }

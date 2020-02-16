@@ -21,23 +21,38 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="9BY-qZ-eOT">
                                 <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mJz-Pe-Zly">
+                                <rect key="frame" x="0.0" y="89.5" width="414" height="723.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xx0-aO-Qzb" id="ESL-Zu-Cds"/>
+                                    <outlet property="delegate" destination="xx0-aO-Qzb" id="xiS-gP-czu"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9BY-qZ-eOT" firstAttribute="bottom" secondItem="JkQ-9o-Y1t" secondAttribute="bottom" constant="-8" id="59B-QK-2Fh"/>
                             <constraint firstItem="9BY-qZ-eOT" firstAttribute="width" secondItem="JkQ-9o-Y1t" secondAttribute="width" id="BFI-NM-Rux"/>
+                            <constraint firstItem="mJz-Pe-Zly" firstAttribute="leading" secondItem="pA5-Vq-ZI2" secondAttribute="leading" id="CFl-Vr-vHg"/>
                             <constraint firstItem="JkQ-9o-Y1t" firstAttribute="trailing" secondItem="pA5-Vq-ZI2" secondAttribute="trailing" id="CyM-aV-wDG"/>
                             <constraint firstItem="JkQ-9o-Y1t" firstAttribute="height" secondItem="pA5-Vq-ZI2" secondAttribute="height" multiplier="0.1" id="KqF-xC-1wp"/>
+                            <constraint firstItem="cQD-7I-7ZQ" firstAttribute="bottom" secondItem="mJz-Pe-Zly" secondAttribute="bottom" id="cNc-sr-GpO"/>
                             <constraint firstItem="9BY-qZ-eOT" firstAttribute="centerX" secondItem="JkQ-9o-Y1t" secondAttribute="centerX" id="eDI-Pe-n8p"/>
                             <constraint firstItem="JkQ-9o-Y1t" firstAttribute="leading" secondItem="pA5-Vq-ZI2" secondAttribute="leading" id="fcu-jq-pXZ"/>
                             <constraint firstItem="JkQ-9o-Y1t" firstAttribute="top" secondItem="pA5-Vq-ZI2" secondAttribute="top" id="g6A-8V-pcT"/>
                             <constraint firstItem="9BY-qZ-eOT" firstAttribute="top" secondItem="cQD-7I-7ZQ" secondAttribute="top" id="hyg-eD-eBG"/>
+                            <constraint firstAttribute="trailing" secondItem="mJz-Pe-Zly" secondAttribute="trailing" id="kss-jC-ZN8"/>
+                            <constraint firstItem="mJz-Pe-Zly" firstAttribute="top" secondItem="JkQ-9o-Y1t" secondAttribute="bottom" id="wOe-et-SFR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cQD-7I-7ZQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pantry" image="pantryButton" id="yKr-nm-3Jb"/>
                     <navigationItem key="navigationItem" id="8NP-AL-NL5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pantryTableView" destination="mJz-Pe-Zly" id="9k8-wU-r4e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cf-G8-dUh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
