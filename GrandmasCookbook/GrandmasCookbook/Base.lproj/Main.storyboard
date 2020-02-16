@@ -111,6 +111,11 @@
                         <color key="barTintColor" name="primaryBGColor"/>
                         <color key="selectedImageTintColor" name="secondaryColor"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="ZNO-sw-0DC" kind="relationship" relationship="viewControllers" id="nba-Fo-0h1"/>
                         <segue destination="Mp5-hY-LQd" kind="relationship" relationship="viewControllers" id="wUi-Nb-UN7"/>

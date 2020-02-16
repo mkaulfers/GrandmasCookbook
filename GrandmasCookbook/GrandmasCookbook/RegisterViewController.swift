@@ -86,7 +86,7 @@ class RegisterViewController: UIViewController {
     
     func transitionToProfile()
     {
-        let profileViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.profileViewController) as? ProfileViewController
+        let profileViewController = storyboard?.instantiateViewController(identifier: Utilities.Storyboard.profileViewController) as? ProfileViewController
         
         //INFO: Set the root view controller, make root visible.
         view.window?.rootViewController = profileViewController
@@ -120,8 +120,10 @@ class RegisterViewController: UIViewController {
             return "Please fill in all fields."
         }
         
+        let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         //INFO: Make sure that the email is valid.
-        if !isEmailValid(emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines))
+        if !Utilities.Validations.isPasswordValid(cleanedEmail)
         {
             return "Please enter a valid email."
         }
@@ -136,7 +138,7 @@ class RegisterViewController: UIViewController {
         //INFO: Make sure that the passwords are secure.
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if !isPasswordValid(cleanedPassword)
+        if !Utilities.Validations.isPasswordValid(cleanedPassword)
         {
             return "Please make sure your password is at least 8 characters, contains a special character and a number."
         }

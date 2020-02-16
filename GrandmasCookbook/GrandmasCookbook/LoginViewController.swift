@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -22,6 +23,46 @@ class LoginViewController: UIViewController {
         setUpElements()
     }
     
+    //MARK: - Button Controls
+    
+    @IBAction func logInButton(_ sender: Any)
+    {
+        //INFO: Do some validation
+        let error = validateFields()
+        
+        if error != nil
+        {
+            showError(error!)
+        }
+        else
+        {
+            //INFO: Cleanup input fields.
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                if error != nil
+                {
+                    self.errorLabel.text = error!.localizedDescription
+                    self.errorLabel.alpha = 1
+                }
+                else
+                {
+                    let profileViewController = self.storyboard?.instantiateViewController(identifier: Utilities.Storyboard.profileViewController) as? ProfileViewController
+                    
+                    //INFO: Set the root view controller, make root visible.
+                    self.view.window?.rootViewController = profileViewController
+                    self.view.window?.makeKeyAndVisible()
+                }
+            }
+        }
+    }
+    
+    @IBAction func backButton(_ sender: UIButton)
+    {
+        dismiss(animated: true, completion: nil)
+    }
+    
     //MARK: - Custom Methods
     
     func setUpElements()
@@ -29,11 +70,25 @@ class LoginViewController: UIViewController {
         errorLabel.alpha = 0
     }
     
-    //MARK: - Button Controls
-    
-    @IBAction func backButton(_ sender: UIButton)
+    func validateFields() -> String?
     {
-        dismiss(animated: true, completion: nil)
+        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            return "Please fill in all fields."
+        }
+        
+        let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !Utilities.Validations.isEmailValid(cleanedEmail)
+        {
+            return "Please enter a valid email."
+        }
+        return nil
+    }
+    
+    func showError(_ message: String)
+    {
+        errorLabel.text = message
+        errorLabel.alpha = 1
     }
     
     

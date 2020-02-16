@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE4554B323F8905800D016B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE4554B223F8905800D016B8 /* GoogleService-Info.plist */; };
-		AE7E11EF23F9B640003969D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7E11EE23F9B640003969D8 /* Constants.swift */; };
+		AE7E11EF23F9B640003969D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7E11EE23F9B640003969D8 /* Utilities.swift */; };
 		AE90C3EE23F747C000F3E0E8 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AE90C3ED23F747C000F3E0E8 /* fonts */; };
 		AE90C3F023F74AC800F3E0E8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */; };
 		AE90C3F223F74D0D00F3E0E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */; };
@@ -38,7 +38,7 @@
 		27ACDF18CB1045F1B36F22DC /* Pods-GrandmasCookbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrandmasCookbook.debug.xcconfig"; path = "Target Support Files/Pods-GrandmasCookbook/Pods-GrandmasCookbook.debug.xcconfig"; sourceTree = "<group>"; };
 		8653F2AA4D88101D200563D6 /* Pods_GrandmasCookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrandmasCookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4554B223F8905800D016B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AE7E11EE23F9B640003969D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AE7E11EE23F9B640003969D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AE90C3ED23F747C000F3E0E8 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		AE7E11ED23F9B61F003969D8 /* Utitlities */ = {
 			isa = PBXGroup;
 			children = (
-				AE7E11EE23F9B640003969D8 /* Constants.swift */,
+				AE7E11EE23F9B640003969D8 /* Utilities.swift */,
 			);
 			name = Utitlities;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 				AED3F02023F72C6600E5C7B9 /* SearchViewController.swift in Sources */,
 				AED3F01A23F72C4900E5C7B9 /* ShoppingListViewController.swift in Sources */,
 				AE90C3F223F74D0D00F3E0E8 /* ProfileViewController.swift in Sources */,
-				AE7E11EF23F9B640003969D8 /* Constants.swift in Sources */,
+				AE7E11EF23F9B640003969D8 /* Utilities.swift in Sources */,
 				AECE07F423F4A4EE0048060D /* AppDelegate.swift in Sources */,
 				AECE07F623F4A4EE0048060D /* SceneDelegate.swift in Sources */,
 				AED3F01E23F72C5F00E5C7B9 /* FeaturedViewController.swift in Sources */,
