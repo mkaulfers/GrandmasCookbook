@@ -38,7 +38,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <accessibility key="accessibilityConfiguration" identifier="PantryHeader"/>
+            <accessibility key="accessibilityConfiguration" identifier="reusableHeader"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eEu-tO-WEG" secondAttribute="bottom" id="21z-wd-6iM"/>
                 <constraint firstItem="eEu-tO-WEG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KgR-Hh-vc8"/>
