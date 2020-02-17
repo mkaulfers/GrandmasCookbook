@@ -23,9 +23,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoVertical" translatesAutoresizingMaskIntoConstraints="NO" id="vfc-kB-LIh">
                                 <rect key="frame" x="0.0" y="91" width="414" height="256"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14f-zT-JuN">
-                                <rect key="frame" x="115" y="433" width="185" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14f-zT-JuN">
+                                <rect key="frame" x="114.5" y="433" width="185" height="30"/>
                                 <state key="normal" title="Select To Continue (TEMP)"/>
                                 <connections>
                                     <segue destination="ufK-0h-POs" kind="presentation" modalPresentationStyle="currentContext" id="pqQ-8y-vff"/>
@@ -36,6 +35,8 @@
                         <constraints>
                             <constraint firstItem="vfc-kB-LIh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="2bK-Qg-Nhv"/>
                             <constraint firstAttribute="bottom" secondItem="FRE-P9-mTR" secondAttribute="bottom" id="OdS-tv-VVj"/>
+                            <constraint firstItem="14f-zT-JuN" firstAttribute="centerX" secondItem="FRE-P9-mTR" secondAttribute="centerX" id="aMO-mo-y5L"/>
+                            <constraint firstItem="14f-zT-JuN" firstAttribute="centerY" secondItem="FRE-P9-mTR" secondAttribute="centerY" id="bxJ-Hg-dj6"/>
                             <constraint firstItem="vfc-kB-LIh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cGy-eq-uGS"/>
                             <constraint firstItem="vfc-kB-LIh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gst-cq-NiM"/>
                             <constraint firstItem="vfc-kB-LIh" firstAttribute="height" secondItem="FRE-P9-mTR" secondAttribute="height" multiplier="0.285714" id="m3L-AI-ADx"/>

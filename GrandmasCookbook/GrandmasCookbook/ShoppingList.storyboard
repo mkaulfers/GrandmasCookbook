@@ -13,22 +13,34 @@
             <objects>
                 <viewController id="HVN-bV-0dM" customClass="ShoppingListViewController" customModule="GrandmasCookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ii-Yt-1nc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGt-dr-fo5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="81.5"/>
                                 <color key="backgroundColor" name="primaryBGColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="o1g-Wf-aF0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="29.5"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Ic-qo-44a">
+                                <rect key="frame" x="0.0" y="81.5" width="414" height="731.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HVN-bV-0dM" id="fU5-n2-GLm"/>
+                                    <outlet property="delegate" destination="HVN-bV-0dM" id="OcJ-ps-Wza"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="o1g-Wf-aF0" firstAttribute="width" secondItem="iGt-dr-fo5" secondAttribute="width" id="373-ra-aOp"/>
+                            <constraint firstItem="2Ic-qo-44a" firstAttribute="leading" secondItem="0ii-Yt-1nc" secondAttribute="leading" id="AEx-Z6-CWh"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ic-qo-44a" secondAttribute="trailing" id="ANb-2C-MGY"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ic-qo-44a" secondAttribute="bottom" id="HW1-wZ-lcl"/>
                             <constraint firstItem="iGt-dr-fo5" firstAttribute="leading" secondItem="0ii-Yt-1nc" secondAttribute="leading" id="OeW-w5-mKP"/>
                             <constraint firstAttribute="trailing" secondItem="iGt-dr-fo5" secondAttribute="trailing" id="P2L-he-mXb"/>
+                            <constraint firstItem="2Ic-qo-44a" firstAttribute="top" secondItem="iGt-dr-fo5" secondAttribute="bottom" id="WeP-aK-Sjb"/>
                             <constraint firstItem="o1g-Wf-aF0" firstAttribute="bottom" secondItem="iGt-dr-fo5" secondAttribute="bottom" constant="-8" id="cq1-Q0-eqs"/>
                             <constraint firstItem="o1g-Wf-aF0" firstAttribute="top" secondItem="jDO-a2-RL9" secondAttribute="top" id="qj5-zF-HeQ"/>
                             <constraint firstItem="iGt-dr-fo5" firstAttribute="height" secondItem="0ii-Yt-1nc" secondAttribute="height" multiplier="0.1" id="ugk-lh-YNN"/>
@@ -38,6 +50,10 @@
                         <viewLayoutGuide key="safeArea" id="jDO-a2-RL9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shopping List" image="listButton" id="ihK-mr-KIw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="shoppingListTableView" destination="2Ic-qo-44a" id="ldn-x1-d9e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khX-xY-T9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

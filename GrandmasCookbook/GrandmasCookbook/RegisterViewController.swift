@@ -123,7 +123,7 @@ class RegisterViewController: UIViewController {
         let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         //INFO: Make sure that the email is valid.
-        if !Utilities.Validations.isPasswordValid(cleanedEmail)
+        if !Utilities.Validations.isEmailValid(cleanedEmail)
         {
             return "Please enter a valid email."
         }

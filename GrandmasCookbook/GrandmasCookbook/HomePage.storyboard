@@ -9,14 +9,12 @@
     </dependencies>
     <scenes>
         <!--Profile-->
-        <scene sceneID="k9e-Yw-UoT">
+        <scene sceneID="9Nr-6u-0Oe">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="aSd-zW-3Ku" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4o3-Gm-N5k"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cxa-dI-Fb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Profile" id="Xp7-Xf-TnR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1E-4o-0Yf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="-118"/>
+            <point key="canvasLocation" x="1844" y="-121"/>
         </scene>
         <!--Home-->
         <scene sceneID="rrK-wG-UlV">
@@ -39,7 +37,8 @@
                                 <color key="tintColor" name="primaryTextColor"/>
                                 <state key="normal" backgroundImage="person.circle" catalog="system"/>
                                 <connections>
-                                    <segue destination="aSd-zW-3Ku" kind="presentation" modalPresentationStyle="fullScreen" id="Isc-oq-5e7"/>
+                                    <action selector="viewAccountSelected:" destination="1vQ-f6-Ut3" eventType="touchUpInside" id="o0M-Dp-wdN"/>
+                                    <segue destination="Xp7-Xf-TnR" kind="presentation" modalPresentationStyle="fullScreen" id="kEC-PC-qKV"/>
                                 </connections>
                             </button>
                         </subviews>
