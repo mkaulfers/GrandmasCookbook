@@ -21,15 +21,15 @@
             <objects>
                 <viewController id="1vQ-f6-Ut3" customClass="HomePageViewController" customModule="GrandmasCookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D8l-3u-VL7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VLs-wb-rdE">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="81.5"/>
                                 <color key="backgroundColor" name="primaryBGColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="scj-36-3kp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="37.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="29.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7Q-nL-4w0" userLabel="ProfileButton">
                                 <rect key="frame" x="20" y="43.5" width="37.5" height="37.5"/>
@@ -41,21 +41,34 @@
                                     <segue destination="Xp7-Xf-TnR" kind="presentation" modalPresentationStyle="fullScreen" id="kEC-PC-qKV"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-F5-fKD">
+                                <rect key="frame" x="0.0" y="81.5" width="414" height="731.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1vQ-f6-Ut3" id="fgb-N2-fky"/>
+                                    <outlet property="delegate" destination="1vQ-f6-Ut3" id="y9B-ty-TyD"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="scj-36-3kp" firstAttribute="centerX" secondItem="VLs-wb-rdE" secondAttribute="centerX" id="CuB-IW-ak4"/>
+                            <constraint firstItem="Ofg-F5-fKD" firstAttribute="top" secondItem="VLs-wb-rdE" secondAttribute="bottom" id="GIZ-G5-EdV"/>
                             <constraint firstItem="VLs-wb-rdE" firstAttribute="top" secondItem="D8l-3u-VL7" secondAttribute="top" id="LDc-vu-JTv"/>
                             <constraint firstItem="scj-36-3kp" firstAttribute="bottom" secondItem="VLs-wb-rdE" secondAttribute="bottom" constant="-8" id="OKp-mq-V4n"/>
                             <constraint firstItem="scj-36-3kp" firstAttribute="top" secondItem="wad-15-wTe" secondAttribute="top" id="Xrt-CV-BDX"/>
                             <constraint firstItem="VLs-wb-rdE" firstAttribute="leading" secondItem="D8l-3u-VL7" secondAttribute="leading" id="Zal-d3-ocy"/>
                             <constraint firstItem="VLs-wb-rdE" firstAttribute="trailing" secondItem="D8l-3u-VL7" secondAttribute="trailing" id="Zjd-ce-zJG"/>
+                            <constraint firstAttribute="trailing" secondItem="Ofg-F5-fKD" secondAttribute="trailing" id="b44-Qp-52k"/>
                             <constraint firstItem="VLs-wb-rdE" firstAttribute="height" secondItem="D8l-3u-VL7" secondAttribute="height" multiplier="0.1" id="g81-q0-tTf"/>
+                            <constraint firstItem="Ofg-F5-fKD" firstAttribute="leading" secondItem="D8l-3u-VL7" secondAttribute="leading" id="qTW-Kx-rVb"/>
                             <constraint firstItem="scj-36-3kp" firstAttribute="width" secondItem="VLs-wb-rdE" secondAttribute="width" id="wl6-zm-xRO"/>
+                            <constraint firstAttribute="bottom" secondItem="Ofg-F5-fKD" secondAttribute="bottom" id="xUa-xZ-hp5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wad-15-wTe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeButton" id="tmh-z6-S7X"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqb-9b-CUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

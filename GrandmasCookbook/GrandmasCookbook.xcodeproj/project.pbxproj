@@ -11,8 +11,8 @@
 		AE7E11EF23F9B640003969D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7E11EE23F9B640003969D8 /* Utilities.swift */; };
 		AE90C3F023F74AC800F3E0E8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */; };
 		AE90C3F223F74D0D00F3E0E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */; };
-		AEC2A20E23F9F0F100A956DD /* reusableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2A20D23F9F0F100A956DD /* reusableHeader.swift */; };
-		AEC2A21023F9F11000A956DD /* reusableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A20F23F9F11000A956DD /* reusableHeader.xib */; };
+		AEC2A20E23F9F0F100A956DD /* ReusableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2A20D23F9F0F100A956DD /* ReusableHeader.swift */; };
+		AEC2A21023F9F11000A956DD /* ReusableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A20F23F9F11000A956DD /* ReusableHeader.xib */; };
 		AEC2A22123F9FA0C00A956DD /* GothamRounded-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21423F9FA0A00A956DD /* GothamRounded-Book.otf */; };
 		AEC2A22223F9FA0C00A956DD /* GothamRounded-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21523F9FA0A00A956DD /* GothamRounded-MediumItalic.otf */; };
 		AEC2A22323F9FA0C00A956DD /* GothamRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21623F9FA0A00A956DD /* GothamRounded-Medium.otf */; };
@@ -44,6 +44,8 @@
 		AED3F02D23F72F0A00E5C7B9 /* SearchPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED3F02C23F72F0A00E5C7B9 /* SearchPage.storyboard */; };
 		AED3F03123F741D200E5C7B9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED3F03023F741D200E5C7B9 /* Profile.storyboard */; };
 		AED3F03823F7428100E5C7B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED3F03723F7428100E5C7B9 /* LoginViewController.swift */; };
+		AEDD44F823FC4D6E007649E7 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD44F623FC4D6E007649E7 /* RecipeTableViewCell.swift */; };
+		AEDD44F923FC4D6E007649E7 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDD44F723FC4D6E007649E7 /* RecipeTableViewCell.xib */; };
 		D1D2968E3E629C8ED663F4CA /* Pods_GrandmasCookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8653F2AA4D88101D200563D6 /* Pods_GrandmasCookbook.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +58,8 @@
 		AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AE9D405723F6F575009D6260 /* GrandmasCookbook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrandmasCookbook-Bridging-Header.h"; sourceTree = "<group>"; };
-		AEC2A20D23F9F0F100A956DD /* reusableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reusableHeader.swift; sourceTree = "<group>"; };
-		AEC2A20F23F9F11000A956DD /* reusableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reusableHeader.xib; sourceTree = "<group>"; };
+		AEC2A20D23F9F0F100A956DD /* ReusableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableHeader.swift; sourceTree = "<group>"; };
+		AEC2A20F23F9F11000A956DD /* ReusableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableHeader.xib; sourceTree = "<group>"; };
 		AEC2A21423F9FA0A00A956DD /* GothamRounded-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Book.otf"; sourceTree = "<group>"; };
 		AEC2A21523F9FA0A00A956DD /* GothamRounded-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-MediumItalic.otf"; sourceTree = "<group>"; };
 		AEC2A21623F9FA0A00A956DD /* GothamRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Medium.otf"; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		AED3F02C23F72F0A00E5C7B9 /* SearchPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchPage.storyboard; sourceTree = "<group>"; };
 		AED3F03023F741D200E5C7B9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		AED3F03723F7428100E5C7B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AEDD44F623FC4D6E007649E7 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		AEDD44F723FC4D6E007649E7 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +180,10 @@
 		AEC2A21123F9F50B00A956DD /* Custom XIB's */ = {
 			isa = PBXGroup;
 			children = (
-				AEC2A20F23F9F11000A956DD /* reusableHeader.xib */,
-				AEC2A20D23F9F0F100A956DD /* reusableHeader.swift */,
+				AEC2A20F23F9F11000A956DD /* ReusableHeader.xib */,
+				AEC2A20D23F9F0F100A956DD /* ReusableHeader.swift */,
+				AEDD44F723FC4D6E007649E7 /* RecipeTableViewCell.xib */,
+				AEDD44F623FC4D6E007649E7 /* RecipeTableViewCell.swift */,
 			);
 			name = "Custom XIB's";
 			sourceTree = "<group>";
@@ -346,11 +352,12 @@
 				AEC2A22623F9FA0C00A956DD /* GothamRoundedBook_21018.ttf in Resources */,
 				AECE07FB23F4A4EE0048060D /* Main.storyboard in Resources */,
 				AEC2A22523F9FA0C00A956DD /* Cassandra Personal Use.ttf in Resources */,
+				AEDD44F923FC4D6E007649E7 /* RecipeTableViewCell.xib in Resources */,
 				AEC2A22123F9FA0C00A956DD /* GothamRounded-Book.otf in Resources */,
 				AEC2A22C23F9FA0C00A956DD /* GothamRoundedBold_21016.ttf in Resources */,
 				AEC2A22223F9FA0C00A956DD /* GothamRounded-MediumItalic.otf in Resources */,
 				AEC2A22423F9FA0C00A956DD /* GothamRounded-BoldItalic.otf in Resources */,
-				AEC2A21023F9F11000A956DD /* reusableHeader.xib in Resources */,
+				AEC2A21023F9F11000A956DD /* ReusableHeader.xib in Resources */,
 				AEC2A22B23F9FA0C00A956DD /* GothamRounded-Light.otf in Resources */,
 				AED3F02723F72E5100E5C7B9 /* ShoppingList.storyboard in Resources */,
 				AE4554B323F8905800D016B8 /* GoogleService-Info.plist in Resources */,
@@ -412,10 +419,11 @@
 			files = (
 				AECE07F823F4A4EE0048060D /* LoadingScreen.swift in Sources */,
 				AE90C3F023F74AC800F3E0E8 /* RegisterViewController.swift in Sources */,
-				AEC2A20E23F9F0F100A956DD /* reusableHeader.swift in Sources */,
+				AEC2A20E23F9F0F100A956DD /* ReusableHeader.swift in Sources */,
 				AED3F01C23F72C5700E5C7B9 /* HomePageViewController.swift in Sources */,
 				AECE07FE23F4A4EE0048060D /* GrandmasCookbook.xcdatamodeld in Sources */,
 				AED3F02023F72C6600E5C7B9 /* SearchViewController.swift in Sources */,
+				AEDD44F823FC4D6E007649E7 /* RecipeTableViewCell.swift in Sources */,
 				AED3F01A23F72C4900E5C7B9 /* ShoppingListViewController.swift in Sources */,
 				AE90C3F223F74D0D00F3E0E8 /* ProfileViewController.swift in Sources */,
 				AE7E11EF23F9B640003969D8 /* Utilities.swift in Sources */,

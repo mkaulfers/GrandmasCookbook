@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
                 }
                 else
                 {
-                    let profileViewController = self.storyboard?.instantiateViewController(identifier: Utilities.Storyboard.profileViewController) as? ProfileViewController
+                    let profileViewController = self.storyboard?.instantiateViewController(identifier: Utilities.StaticStrings.profileViewController) as? ProfileViewController
                     
                     //INFO: Set the root view controller, make root visible.
                     self.view.window?.rootViewController = profileViewController

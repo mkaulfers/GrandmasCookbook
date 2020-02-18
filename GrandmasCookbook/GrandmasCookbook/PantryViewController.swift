@@ -18,8 +18,8 @@ class PantryViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
 
         //INFO: Load the header view.
-        let headerNib = UINib.init(nibName: "reusableHeader", bundle: Bundle.main)
-        pantryTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "reusableHeader")
+        let headerNib = UINib.init(nibName: "ReusableHeader", bundle: Bundle.main)
+        pantryTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "ReusableHeader")
         
         //INFO: Hide the separator
         pantryTableView.separatorColor = .clear
@@ -27,12 +27,12 @@ class PantryViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //MARK: - Table View Management
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        let headerView = pantryTableView.dequeueReusableHeaderFooterView(withIdentifier: "reusableHeader") as! reusableHeader
+        let headerView = pantryTableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableHeader") as! ReusableHeader
         return headerView.bounds.size.height
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = pantryTableView.dequeueReusableHeaderFooterView(withIdentifier: "reusableHeader") as! reusableHeader
+        let headerView = pantryTableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableHeader") as! ReusableHeader
         
         headerView.HeaderText.text = "Pantry"
         

@@ -86,7 +86,7 @@ class RegisterViewController: UIViewController {
     
     func transitionToProfile()
     {
-        let profileViewController = storyboard?.instantiateViewController(identifier: Utilities.Storyboard.profileViewController) as? ProfileViewController
+        let profileViewController = storyboard?.instantiateViewController(identifier: Utilities.StaticStrings.profileViewController) as? ProfileViewController
         
         //INFO: Set the root view controller, make root visible.
         view.window?.rootViewController = profileViewController

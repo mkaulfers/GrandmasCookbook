@@ -9,8 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class HomePageViewController: UIViewController {
-
+class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +17,7 @@ class HomePageViewController: UIViewController {
     }
     
     @IBAction func viewAccountSelected(_ sender: UIButton) {
+        //TODO: properly configure segue and check to segue if the user is already logged in.
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -25,5 +25,13 @@ class HomePageViewController: UIViewController {
         return true
     }
     
-
+    //MARK: - Table View Management
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
 }
