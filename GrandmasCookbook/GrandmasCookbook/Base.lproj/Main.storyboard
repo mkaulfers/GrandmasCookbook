@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRoundedLight_21020.ttf">
+            <string>GothamRounded-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Loading Screen-->
         <scene sceneID="tne-QT-ifu">
@@ -18,34 +23,50 @@
                         <subviews>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FRE-P9-mTR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SZW-EO-KjN">
+                                        <rect key="frame" x="93" y="449.5" width="228" height="7"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5v-wz-LYX">
+                                        <rect key="frame" x="93" y="464.5" width="228" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Light" family="Gotham Rounded" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" name="primaryBGColor"/>
+                                <constraints>
+                                    <constraint firstItem="w5v-wz-LYX" firstAttribute="width" secondItem="SZW-EO-KjN" secondAttribute="width" id="71F-Ux-eeB"/>
+                                    <constraint firstItem="w5v-wz-LYX" firstAttribute="top" secondItem="SZW-EO-KjN" secondAttribute="bottom" constant="8" id="YsB-zC-Z0l"/>
+                                    <constraint firstItem="w5v-wz-LYX" firstAttribute="width" secondItem="SZW-EO-KjN" secondAttribute="height" multiplier="33:1" id="cBW-nR-Voa"/>
+                                    <constraint firstItem="w5v-wz-LYX" firstAttribute="centerX" secondItem="SZW-EO-KjN" secondAttribute="centerX" id="dGa-wV-emz"/>
+                                </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoVertical" translatesAutoresizingMaskIntoConstraints="NO" id="vfc-kB-LIh">
                                 <rect key="frame" x="0.0" y="91" width="414" height="256"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14f-zT-JuN">
-                                <rect key="frame" x="114.5" y="433" width="185" height="30"/>
-                                <state key="normal" title="Select To Continue (TEMP)"/>
-                                <connections>
-                                    <segue destination="ufK-0h-POs" kind="presentation" modalPresentationStyle="currentContext" id="pqQ-8y-vff"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="vfc-kB-LIh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="2bK-Qg-Nhv"/>
+                            <constraint firstItem="SZW-EO-KjN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LCL-Jf-ama"/>
                             <constraint firstAttribute="bottom" secondItem="FRE-P9-mTR" secondAttribute="bottom" id="OdS-tv-VVj"/>
-                            <constraint firstItem="14f-zT-JuN" firstAttribute="centerX" secondItem="FRE-P9-mTR" secondAttribute="centerX" id="aMO-mo-y5L"/>
-                            <constraint firstItem="14f-zT-JuN" firstAttribute="centerY" secondItem="FRE-P9-mTR" secondAttribute="centerY" id="bxJ-Hg-dj6"/>
+                            <constraint firstItem="SZW-EO-KjN" firstAttribute="width" secondItem="vfc-kB-LIh" secondAttribute="width" multiplier="0.55" id="auB-VE-4PR"/>
                             <constraint firstItem="vfc-kB-LIh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cGy-eq-uGS"/>
                             <constraint firstItem="vfc-kB-LIh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gst-cq-NiM"/>
                             <constraint firstItem="vfc-kB-LIh" firstAttribute="height" secondItem="FRE-P9-mTR" secondAttribute="height" multiplier="0.285714" id="m3L-AI-ADx"/>
                             <constraint firstAttribute="trailing" secondItem="FRE-P9-mTR" secondAttribute="trailing" id="uLs-ah-KaS"/>
                             <constraint firstItem="FRE-P9-mTR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w9Q-sS-I3L"/>
                             <constraint firstItem="FRE-P9-mTR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y5P-ev-khO"/>
+                            <constraint firstItem="SZW-EO-KjN" firstAttribute="centerX" secondItem="vfc-kB-LIh" secondAttribute="centerX" id="ziU-SO-uQq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="progressBarView" destination="SZW-EO-KjN" id="0rE-OL-tnG"/>
+                        <outlet property="progressLabel" destination="w5v-wz-LYX" id="rt9-z6-Ijj"/>
+                        <segue destination="ufK-0h-POs" kind="presentation" identifier="toTabBarController" modalPresentationStyle="fullScreen" id="tAL-Oe-uCz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

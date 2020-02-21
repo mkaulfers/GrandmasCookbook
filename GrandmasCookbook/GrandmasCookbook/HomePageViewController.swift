@@ -10,10 +10,16 @@ import UIKit
 import FirebaseAuth
 
 class HomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var savedRecipeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     }
     
     @IBAction func viewAccountSelected(_ sender: UIButton) {

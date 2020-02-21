@@ -46,6 +46,7 @@
 		AED3F03823F7428100E5C7B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED3F03723F7428100E5C7B9 /* LoginViewController.swift */; };
 		AEDD44F823FC4D6E007649E7 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD44F623FC4D6E007649E7 /* RecipeTableViewCell.swift */; };
 		AEDD44F923FC4D6E007649E7 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDD44F723FC4D6E007649E7 /* RecipeTableViewCell.xib */; };
+		AEDD44FB23FC824B007649E7 /* RecipeStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD44FA23FC824B007649E7 /* RecipeStructs.swift */; };
 		D1D2968E3E629C8ED663F4CA /* Pods_GrandmasCookbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8653F2AA4D88101D200563D6 /* Pods_GrandmasCookbook.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		AED3F03723F7428100E5C7B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEDD44F623FC4D6E007649E7 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		AEDD44F723FC4D6E007649E7 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		AEDD44FA23FC824B007649E7 /* RecipeStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStructs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				AE7E11EE23F9B640003969D8 /* Utilities.swift */,
+				AEDD44FA23FC824B007649E7 /* RecipeStructs.swift */,
 			);
 			name = Utitlities;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				AECE07F623F4A4EE0048060D /* SceneDelegate.swift in Sources */,
 				AED3F01E23F72C5F00E5C7B9 /* FeaturedViewController.swift in Sources */,
 				AED3F03823F7428100E5C7B9 /* LoginViewController.swift in Sources */,
+				AEDD44FB23FC824B007649E7 /* RecipeStructs.swift in Sources */,
 				AED3F01823F72C3300E5C7B9 /* PantryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
