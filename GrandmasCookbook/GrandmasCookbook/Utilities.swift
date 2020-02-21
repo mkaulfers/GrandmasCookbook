@@ -19,7 +19,9 @@ struct Utilities
         static let loginViewController = "loginViewController"
         static let registerViewController = "registerViewController"
         static let tabBarController = "toTabBarController"
-        static var spoonacularAPILink = "https://api.spoonacular.com/recipes/search?query=chicken&apiKey=36af5618ceba4d28a34d6689da3d3d89"
+        
+        //TODO: - Properly setup API Link
+        static var spoonacularAPILink = "https://api.spoonacular.com/recipes/random?&number=2&apiKey=36af5618ceba4d28a34d6689da3d3d89"
     }
     
     //MARK: - Validation Methods
