@@ -30,6 +30,7 @@ class FeaturedViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = featuredTableView.dequeueReusableCell(withIdentifier: Utilities.StaticStrings.recipeTableViewCell, for: indexPath) as! RecipeTableViewCell
+        cell.imageView?.image = Utilities.GlobalData.currentRecipes?.recipes[indexPath.row].retrievedImage
         return cell
     }
 

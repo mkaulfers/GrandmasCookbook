@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class Recipes: Codable{
     var recipes: [Recipe]
 }
 
 class Recipe: Codable{
+    //INFO: Properties
     var vegetarian: Bool
     var veryHealthy: Bool
     var veryPopular: Bool
@@ -22,6 +24,15 @@ class Recipe: Codable{
     var extendedIngredients: [Ingredient]
     var image: String
     var instructions: String
+    
+    //INFO: Computed Properties
+    var retrievedImage: UIImage
+    {
+        guard let url = URL(string: self.image) else { return UIImage(named: "logoVertical")!}
+        let data = try? Data(contentsOf: url)
+        let retrievedImage = UIImage(data: data!)
+        return retrievedImage!
+    }
 }
 
 class Ingredient: Codable{
