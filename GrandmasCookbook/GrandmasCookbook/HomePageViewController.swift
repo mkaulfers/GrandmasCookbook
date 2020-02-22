@@ -20,6 +20,7 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print(Utilities.GlobalData.currentRecipes?.recipes[0].title)
     }
     
     @IBAction func viewAccountSelected(_ sender: UIButton) {

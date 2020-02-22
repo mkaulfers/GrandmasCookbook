@@ -51,6 +51,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="udT-aH-NLZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="featuredTableView" destination="b6c-iM-Bxv" id="Dx1-EP-Eaz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjk-5w-8a6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE3A602D2400E9D700488FD0 /* TestJsonObject.json in Resources */ = {isa = PBXBuildFile; fileRef = AE3A602C2400E9D700488FD0 /* TestJsonObject.json */; };
 		AE4554B323F8905800D016B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE4554B223F8905800D016B8 /* GoogleService-Info.plist */; };
 		AE7E11EF23F9B640003969D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7E11EE23F9B640003969D8 /* Utilities.swift */; };
 		AE90C3F023F74AC800F3E0E8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */; };
@@ -54,6 +55,7 @@
 		1CFE6F814C890B926A094D0C /* Pods-GrandmasCookbook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrandmasCookbook.release.xcconfig"; path = "Target Support Files/Pods-GrandmasCookbook/Pods-GrandmasCookbook.release.xcconfig"; sourceTree = "<group>"; };
 		27ACDF18CB1045F1B36F22DC /* Pods-GrandmasCookbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrandmasCookbook.debug.xcconfig"; path = "Target Support Files/Pods-GrandmasCookbook/Pods-GrandmasCookbook.debug.xcconfig"; sourceTree = "<group>"; };
 		8653F2AA4D88101D200563D6 /* Pods_GrandmasCookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrandmasCookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3A602C2400E9D700488FD0 /* TestJsonObject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestJsonObject.json; sourceTree = "<group>"; };
 		AE4554B223F8905800D016B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE7E11EE23F9B640003969D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				AE7E11EE23F9B640003969D8 /* Utilities.swift */,
 				AEDD44FA23FC824B007649E7 /* RecipeStructs.swift */,
+				AE3A602C2400E9D700488FD0 /* TestJsonObject.json */,
 			);
 			name = Utitlities;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				AEDD44F923FC4D6E007649E7 /* RecipeTableViewCell.xib in Resources */,
 				AEC2A22123F9FA0C00A956DD /* GothamRounded-Book.otf in Resources */,
 				AEC2A22C23F9FA0C00A956DD /* GothamRoundedBold_21016.ttf in Resources */,
+				AE3A602D2400E9D700488FD0 /* TestJsonObject.json in Resources */,
 				AEC2A22223F9FA0C00A956DD /* GothamRounded-MediumItalic.otf in Resources */,
 				AEC2A22423F9FA0C00A956DD /* GothamRounded-BoldItalic.otf in Resources */,
 				AEC2A21023F9F11000A956DD /* ReusableHeader.xib in Resources */,
