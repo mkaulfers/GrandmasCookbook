@@ -17,6 +17,9 @@ class FeaturedViewController: UIViewController, UITableViewDataSource, UITableVi
 
         let headerNib = UINib.init(nibName: "RecipeTableViewCell", bundle: Bundle.main)
         featuredTableView.register(headerNib, forCellReuseIdentifier: Utilities.StaticStrings.recipeTableViewCell)
+        
+        let headerView = featuredTableView.dequeueReusableCell(withIdentifier: Utilities.StaticStrings.recipeTableViewCell) as! RecipeTableViewCell
+        featuredTableView.rowHeight =  headerView.bounds.size.height
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,6 +27,7 @@ class FeaturedViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     //MARK: Table View Managment
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Utilities.GlobalData.currentRecipes?.recipes.count ?? 0
     }

@@ -6,11 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="GothamRounded-Book.otf">
-            <string>GothamRounded-Book</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,127 +14,46 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" userLabel="foodImage">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Nu-6T-g0w">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ppn-by-s3H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="3To-1H-Eir" userLabel="ribbon#1">
-                        <rect key="frame" x="-8" y="10" width="111" height="42"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                        </accessibility>
-                    </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="fyw-JS-GWc" userLabel="ribbon#2">
-                        <rect key="frame" x="-8" y="52" width="111" height="42"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                        </accessibility>
-                    </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="2F4-ae-MQK" userLabel="ribbon#3">
-                        <rect key="frame" x="-8" y="94" width="111" height="42"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                        </accessibility>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the recipe name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5Q-F2-iDF">
-                        <rect key="frame" x="10" y="171.5" width="361" height="17"/>
-                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYi-Qu-mAV">
-                        <rect key="frame" x="294" y="10" width="110" height="20"/>
+                    <stackView opaque="NO" contentMode="center" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="U0G-hL-n8C">
+                        <rect key="frame" x="-8" y="0.0" width="111" height="129"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-tO-IkN" userLabel="star1">
-                                <rect key="frame" x="0.0" y="0.0" width="22" height="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="swx-Oy-Fao">
+                                <rect key="frame" x="0.0" y="0.0" width="111" height="43"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zF3-PQ-U9h" userLabel="star2">
-                                <rect key="frame" x="22" y="0.0" width="22" height="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="8qr-3h-aI8">
+                                <rect key="frame" x="0.0" y="43" width="111" height="43"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zrQ-Fm-BpL" userLabel="star3">
-                                <rect key="frame" x="44" y="0.0" width="22" height="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hC3-Ae-Z8x" userLabel="star4">
-                                <rect key="frame" x="66" y="0.0" width="22" height="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z4q-P1-trh" userLabel="star5">
-                                <rect key="frame" x="88" y="0.0" width="22" height="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="1OX-YU-gtC">
+                                <rect key="frame" x="0.0" y="86" width="111" height="43"/>
                             </imageView>
                         </subviews>
                     </stackView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="cart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9tp-mU-Nyj">
-                        <rect key="frame" x="381" y="171.5" width="23" height="18.5"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="2F4-ae-MQK" firstAttribute="centerX" secondItem="fyw-JS-GWc" secondAttribute="centerX" id="0uL-Gb-ZNR"/>
-                    <constraint firstItem="2F4-ae-MQK" firstAttribute="width" secondItem="fyw-JS-GWc" secondAttribute="width" id="3CR-p8-Uuf"/>
-                    <constraint firstItem="fyw-JS-GWc" firstAttribute="top" secondItem="3To-1H-Eir" secondAttribute="bottom" id="6jZ-Ia-BOM"/>
-                    <constraint firstItem="3To-1H-Eir" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-8" id="78y-Qu-g3I"/>
-                    <constraint firstItem="t5Q-F2-iDF" firstAttribute="height" secondItem="5Nu-6T-g0w" secondAttribute="height" multiplier="0.085" id="CtC-hR-4JO"/>
-                    <constraint firstItem="3To-1H-Eir" firstAttribute="width" secondItem="5Nu-6T-g0w" secondAttribute="width" multiplier="0.268116" id="EXw-RG-L9X"/>
-                    <constraint firstItem="oYi-Qu-mAV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="FVy-wJ-1ec"/>
-                    <constraint firstItem="5Nu-6T-g0w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IKB-6F-ShC"/>
-                    <constraint firstItem="t5Q-F2-iDF" firstAttribute="centerY" secondItem="9tp-mU-Nyj" secondAttribute="centerY" id="JAd-6c-a3V"/>
-                    <constraint firstItem="2F4-ae-MQK" firstAttribute="height" secondItem="fyw-JS-GWc" secondAttribute="height" id="ONq-fC-uCD"/>
-                    <constraint firstItem="fyw-JS-GWc" firstAttribute="height" secondItem="3To-1H-Eir" secondAttribute="height" id="QQK-ob-yPY"/>
-                    <constraint firstItem="5Nu-6T-g0w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VQX-KE-0PO"/>
-                    <constraint firstAttribute="trailing" secondItem="5Nu-6T-g0w" secondAttribute="trailing" id="dZ6-55-pTT"/>
-                    <constraint firstAttribute="trailing" secondItem="oYi-Qu-mAV" secondAttribute="trailing" constant="10" id="dgW-YE-mo6"/>
-                    <constraint firstAttribute="bottom" secondItem="5Nu-6T-g0w" secondAttribute="bottom" id="e4K-eq-uEy"/>
-                    <constraint firstItem="2F4-ae-MQK" firstAttribute="top" secondItem="fyw-JS-GWc" secondAttribute="bottom" id="efw-Ke-ULp"/>
-                    <constraint firstItem="3To-1H-Eir" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="euD-Kw-Tu1"/>
-                    <constraint firstItem="3To-1H-Eir" firstAttribute="height" secondItem="5Nu-6T-g0w" secondAttribute="height" multiplier="0.21" id="fcL-yV-QzB"/>
-                    <constraint firstItem="9tp-mU-Nyj" firstAttribute="leading" secondItem="t5Q-F2-iDF" secondAttribute="trailing" constant="10" id="gEs-Yb-7yT"/>
-                    <constraint firstItem="fyw-JS-GWc" firstAttribute="width" secondItem="3To-1H-Eir" secondAttribute="width" id="hx7-pW-kGh"/>
-                    <constraint firstItem="fyw-JS-GWc" firstAttribute="centerX" secondItem="3To-1H-Eir" secondAttribute="centerX" id="juw-fa-TRO"/>
-                    <constraint firstAttribute="trailing" secondItem="9tp-mU-Nyj" secondAttribute="trailing" constant="10" id="k3w-hO-ojx"/>
-                    <constraint firstAttribute="bottom" secondItem="9tp-mU-Nyj" secondAttribute="bottom" constant="10" id="kRT-Sl-sMi"/>
-                    <constraint firstItem="t5Q-F2-iDF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vfJ-A9-1aB"/>
+                    <constraint firstItem="U0G-hL-n8C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gui-L1-yfs"/>
+                    <constraint firstAttribute="trailing" secondItem="Ppn-by-s3H" secondAttribute="trailing" id="J7c-0h-ggW"/>
+                    <constraint firstItem="Ppn-by-s3H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KaA-Ua-lPf"/>
+                    <constraint firstAttribute="bottom" secondItem="Ppn-by-s3H" secondAttribute="bottom" id="UpL-eA-KtA"/>
+                    <constraint firstItem="Ppn-by-s3H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wez-If-JL6"/>
+                    <constraint firstItem="U0G-hL-n8C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-8" id="duJ-jF-udc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cart" destination="9tp-mU-Nyj" id="75M-8s-zRM"/>
-                <outlet property="foodImage" destination="5Nu-6T-g0w" id="jtS-CS-pXF"/>
-                <outlet property="recipeName" destination="t5Q-F2-iDF" id="q7H-kl-4iL"/>
-                <outletCollection property="ribbons" destination="3To-1H-Eir" collectionClass="NSMutableArray" id="Rwq-8l-eKP"/>
-                <outletCollection property="ribbons" destination="fyw-JS-GWc" collectionClass="NSMutableArray" id="8oc-mE-ykx"/>
-                <outletCollection property="ribbons" destination="2F4-ae-MQK" collectionClass="NSMutableArray" id="Oet-rO-0Is"/>
-                <outletCollection property="stars" destination="TpO-tO-IkN" collectionClass="NSMutableArray" id="WNg-X2-etD"/>
-                <outletCollection property="stars" destination="zF3-PQ-U9h" collectionClass="NSMutableArray" id="NVd-qp-OB1"/>
-                <outletCollection property="stars" destination="zrQ-Fm-BpL" collectionClass="NSMutableArray" id="7Op-zC-V6q"/>
-                <outletCollection property="stars" destination="hC3-Ae-Z8x" collectionClass="NSMutableArray" id="AUR-Gu-VNq"/>
-                <outletCollection property="stars" destination="Z4q-P1-trh" collectionClass="NSMutableArray" id="Vwi-p5-iCI"/>
+                <outlet property="foodImage" destination="Ppn-by-s3H" id="rek-IE-jfh"/>
+                <outletCollection property="ribbons" destination="swx-Oy-Fao" collectionClass="NSMutableArray" id="rZw-rJ-o44"/>
+                <outletCollection property="ribbons" destination="8qr-3h-aI8" collectionClass="NSMutableArray" id="AGa-NV-x2j"/>
+                <outletCollection property="ribbons" destination="1OX-YU-gtC" collectionClass="NSMutableArray" id="4Za-PK-Dto"/>
             </connections>
             <point key="canvasLocation" x="136.23188405797103" y="171.42857142857142"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="cart.fill" catalog="system" width="64" height="50"/>
         <image name="dayRibbon" width="111" height="43"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
 </document>
