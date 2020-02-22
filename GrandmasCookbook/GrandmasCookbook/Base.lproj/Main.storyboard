@@ -43,7 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="logoView" destination="vfc-kB-LIh" id="Dpg-Wb-Ayc"/>
-                        <segue destination="ufK-0h-POs" kind="presentation" identifier="toTabBarController" modalPresentationStyle="fullScreen" id="tAL-Oe-uCz"/>
+                        <segue destination="ufK-0h-POs" kind="presentation" identifier="toTabBarController" animates="NO" modalPresentationStyle="fullScreen" id="tAL-Oe-uCz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -19,10 +19,6 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print(Utilities.GlobalData.currentRecipes?.recipes[0].title)
-    }
-    
     @IBAction func viewAccountSelected(_ sender: UIButton) {
         //TODO: properly configure segue and check to segue if the user is already logged in.
     }
