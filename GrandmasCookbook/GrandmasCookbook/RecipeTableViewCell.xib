@@ -27,16 +27,16 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlayShadow" translatesAutoresizingMaskIntoConstraints="NO" id="BX6-lB-cGW" userLabel="Overlay Shadow">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-11" translatesAutoresizingMaskIntoConstraints="NO" id="AKK-q5-cj6">
-                        <rect key="frame" x="-8" y="8" width="111" height="107"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="-11" translatesAutoresizingMaskIntoConstraints="NO" id="AKK-q5-cj6">
+                        <rect key="frame" x="-10" y="8" width="111" height="107"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="fMp-03-qW7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="fMp-03-qW7">
                                 <rect key="frame" x="0.0" y="0.0" width="111" height="43"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="J6g-FH-rNP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="J6g-FH-rNP">
                                 <rect key="frame" x="0.0" y="32" width="111" height="43"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="n5u-RP-FXJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monRibbon" translatesAutoresizingMaskIntoConstraints="NO" id="n5u-RP-FXJ">
                                 <rect key="frame" x="0.0" y="64" width="111" height="43"/>
                             </imageView>
                         </subviews>
@@ -80,7 +80,7 @@
                 <constraints>
                     <constraint firstItem="AKK-q5-cj6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="4Gd-Rp-B1f"/>
                     <constraint firstAttribute="trailing" secondItem="Vhp-Od-lOY" secondAttribute="trailing" constant="8" id="4mH-K7-d5N"/>
-                    <constraint firstItem="AKK-q5-cj6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-8" id="7pA-d9-9j5"/>
+                    <constraint firstItem="AKK-q5-cj6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-10" id="7pA-d9-9j5"/>
                     <constraint firstAttribute="bottom" secondItem="ujY-Ss-AZy" secondAttribute="bottom" constant="8" id="AX8-9E-uLF"/>
                     <constraint firstItem="BX6-lB-cGW" firstAttribute="width" secondItem="Ppn-by-s3H" secondAttribute="width" id="C3I-Jb-Fmt"/>
                     <constraint firstAttribute="trailing" secondItem="p5A-pO-Ed9" secondAttribute="trailing" constant="8" id="EyL-GJ-XzQ"/>
@@ -116,7 +116,7 @@
     </objects>
     <resources>
         <image name="cart.fill" catalog="system" width="64" height="50"/>
-        <image name="dayRibbon" width="111" height="43"/>
+        <image name="monRibbon" width="111" height="43"/>
         <image name="overlayShadow" width="375" height="208"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>

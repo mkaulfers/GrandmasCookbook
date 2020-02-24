@@ -11,45 +11,74 @@ import UIKit
 
 class Recipes: Codable{
     var recipes: [Recipe]
+    
+    init()
+    {
+        recipes = [Recipe]()
+    }
 }
 
 class Recipe: Codable{
     //INFO: Properties
-    var vegetarian: Bool
-    var veryHealthy: Bool
-    var veryPopular: Bool
-    var id: Int
-    var readyInMinutes: Int
-    var title: String
-    var extendedIngredients: [Ingredient]
-    var image: String
-    var instructions: String
+    var vegetarian: Bool?
+    var veryHealthy: Bool?
+    var veryPopular: Bool?
+    var id: Int?
+    var readyInMinutes: Int?
+    var title: String?
+    var extendedIngredients: [Ingredient]?
+    var image: String?
+    var instructions: String?
     
-    //INFO: Computed Properties
-    var retrievedImage: UIImage
+    init()
     {
-        guard let url = URL(string: self.image) else { return UIImage(named: "logoVertical")!}
-        let data = try? Data(contentsOf: url)
-        let retrievedImage = UIImage(data: data!)
-        return retrievedImage!
+        vegetarian = false
+        veryHealthy = false
+        veryPopular = false
+        id = 0
+        readyInMinutes = 0
+        title = "Unknown"
+        extendedIngredients = [Ingredient]()
+        image = "https://www.livehappy.com/sites/default/files/styles/article_featured/public/main/articles/peppers-pan-stove-flame.jpg?itok=Po__tNob"
+        instructions = "None Available"
     }
 }
 
 class Ingredient: Codable{
-    var id: Int
-    var name: String
-    var measures: MeasureType
+    var id: Int?
+    var name: String?
+    var measures: MeasureType?
+    
+    init()
+    {
+        id = 0
+        name = "Unknown"
+        measures = MeasureType()
+    }
 }
 
 class MeasureType: Codable{
-    var us: MeasureInfo
-    var metric: MeasureInfo
+    var us: MeasureInfo?
+    var metric: MeasureInfo?
+    
+    init()
+    {
+        us = MeasureInfo()
+        metric = MeasureInfo()
+    }
 }
 
 class MeasureInfo: Codable{
-    var amount: Double
-    var unitShort: String
-    var unitLong: String
+    var amount: Double?
+    var unitShort: String?
+    var unitLong: String?
+    
+    init()
+    {
+        amount = 0.0
+        unitShort = "N/A"
+        unitLong = "N/A"
+    }
 }
 
 

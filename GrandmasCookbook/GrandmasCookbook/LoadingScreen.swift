@@ -31,7 +31,7 @@ class LoadingScreen: UIViewController, URLSessionDelegate{
             if let path = Bundle.main.path(forResource: "TestJsonObject", ofType: "json")
             {
                 let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                Utilities.GlobalData.currentRecipes = try? JSONDecoder().decode(Recipes.self, from: data!)
+                Utilities.GlobalData.currentRecipes = try! JSONDecoder().decode(Recipes.self, from: data!)
             }
             
             DispatchQueue.main.async {
@@ -42,7 +42,7 @@ class LoadingScreen: UIViewController, URLSessionDelegate{
         {
             print("WARNING: Using API to get new data.")
             //INFO: Configure URL Session
-            guard let validURL = URL(string: Utilities.StaticStrings.spoonacularAPILink) else { return }
+            guard let validURL = URL(string: Utilities.StaticStrings.get100Recipes) else { return }
             URLSession.shared.dataTask(with: validURL, completionHandler: { (opt_data, opt_response, opt_error) in
                 
                 //Debug: Bail Out on error
@@ -54,8 +54,8 @@ class LoadingScreen: UIViewController, URLSessionDelegate{
                     let data = opt_data
                     else { return }
                 
-                Utilities.GlobalData.currentRecipes = try? JSONDecoder().decode(Recipes.self, from: data)
-                
+                Utilities.GlobalData.currentRecipes = try! JSONDecoder().decode(Recipes.self, from: data)
+            
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "toTabBarController", sender: nil)
                 }
