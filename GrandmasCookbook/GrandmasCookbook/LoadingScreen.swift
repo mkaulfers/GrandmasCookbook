@@ -41,8 +41,10 @@ class LoadingScreen: UIViewController, URLSessionDelegate{
         else
         {
             print("WARNING: Using API to get new data.")
-            //INFO: Configure URL Session
+            //INFO: Configure URL Session. The URL string is coming from Utilities.StaticStrings so that I can prevent typos. All access to static variables is stored there.
             guard let validURL = URL(string: Utilities.StaticStrings.get100Recipes) else { return }
+            
+            //Start a datatask. If there's an error then we will cancel. This will cause the app to stop functioning for the featured tab, but it will not cause a crash. Might consider moving this into the featured tab itself, though it does load random recipes. Adding these random recipes to the Search Page as well. 
             URLSession.shared.dataTask(with: validURL, completionHandler: { (opt_data, opt_response, opt_error) in
                 
                 //Debug: Bail Out on error
@@ -66,7 +68,6 @@ class LoadingScreen: UIViewController, URLSessionDelegate{
     //MARK: - Animations
     func animatePulsatingLayer(){
         let animation = CABasicAnimation(keyPath: "transform.scale")
-        
         animation.toValue = (0.28*view.bounds.width)/100
         animation.duration = 0.9
         animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
