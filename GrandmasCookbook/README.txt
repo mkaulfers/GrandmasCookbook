@@ -18,9 +18,15 @@ Known bugs
 - Cannot "back" out of the login screen
 - Cannot "Reset Password"
 - Input fields do not allow closing of the keyboard yet. 
+- Progress bar removed
+- Splash Screen Mis-Aligned
+- Throwing error between loading view transition.
+- Cached images are not loading properly at first. They load properly after a moment, may flicker incorrect images briefly.
+
 
 Any other special requirements your instructor should know about
 
-- Most of the work was done in the database as well as the UI/UX design. I've attached a report for RescueTime as well as WakaTime to show 20hr min requirement. Week 3 and 4 should have substantially more time in Xcode.
+- Pantry, Shopping List are not implemented due to dependency on Saving Recipes for the "Home Page". 
 
-- The app is not pulling in any data from the API at this time, tableViews, filters, searching, and anything else related to that will not be viewable. 
+- I have the searchable items in a format that will have to be updated periodically someIngredient;someIDValue so searching based on that has not yet been implemented.
+

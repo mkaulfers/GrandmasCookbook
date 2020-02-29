@@ -57,5 +57,45 @@ struct Utilities
             let cleanedString = stringToClean.trimmingCharacters(in: .whitespacesAndNewlines)
             return cleanedString
         }
+        
+        static func getMoreData(refresh yourTableView: UITableView)
+        {
+            var gettingMoreData = false
+            
+            if gettingMoreData == false
+            {
+                gettingMoreData = true
+                print("WARNING: Using API to get new data.")
+                //INFO: Configure URL Session. The URL string is coming from Utilities.StaticStrings so that I can prevent typos. All access to static variables is stored there.
+                guard let validURL = URL(string: Utilities.StaticStrings.get100Recipes) else { return }
+                
+                //Start a datatask. If there's an error then we will cancel. This will cause the app to stop functioning for the featured tab, but it will not cause a crash. Might consider moving this into the featured tab itself, though it does load random recipes. Adding these random recipes to the Search Page as well.
+                URLSession.shared.dataTask(with: validURL, completionHandler: { (opt_data, opt_response, opt_error) in
+                    
+                    //Debug: Bail Out on error
+                    if opt_error != nil { return }
+                    
+                    //Validate: Check the response, statusCode, and data
+                    guard let response = opt_response as? HTTPURLResponse,
+                        response.statusCode == 200,
+                        let data = opt_data
+                        else { return }
+                    
+                    let additionalData = try! JSONDecoder().decode(Recipes.self, from: data)
+                    
+                    Utilities.GlobalData.currentRecipes.recipes += additionalData.recipes
+                    
+                    DispatchQueue.main.async {
+                        yourTableView.reloadData()
+                    }
+                    
+                    gettingMoreData = false
+                }).resume()
+            }
+            else
+            {
+                yourTableView.reloadData()
+            }
+        }
     }
 }

@@ -54,11 +54,22 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="featuredTableView" destination="b6c-iM-Bxv" id="Dx1-EP-Eaz"/>
+                        <segue destination="LLK-VA-78r" kind="show" identifier="toRecipePage" id="dv2-wz-Rau"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjk-5w-8a6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3126.0869565217395" y="128.57142857142856"/>
+        </scene>
+        <!--RecipePage-->
+        <scene sceneID="NxY-xR-Naz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecipePage" referencedIdentifier="RecipePage" id="LLK-VA-78r" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yne-Do-bfw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iia-so-yFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3968" y="15"/>
         </scene>
     </scenes>
     <resources>

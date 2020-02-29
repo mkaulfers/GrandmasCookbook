@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRoundedBook_21018.ttf">
+            <string>GothamRounded-Book</string>
+        </array>
+        <array key="GothamRoundedLight_21020.ttf">
+            <string>GothamRounded-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" interfaceStyle="light" id="iN0-l3-epB" customClass="ReusableRecipeViewHeader" customModule="GrandmasCookbook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awi-E7-ora" userLabel="MainView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGF-uW-MMI" userLabel="LabelView">
+                            <rect key="frame" x="0.0" y="208" width="414" height="57"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Nq7-fx-VE6">
+                                    <rect key="frame" x="8" y="34" width="386" height="15"/>
+                                    <fontDescription key="fontDescription" name="GothamRounded-Light" family="Gotham Rounded" pointSize="15"/>
+                                    <color key="textColor" name="primaryTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-Jj-ReQ">
+                                    <rect key="frame" x="8" y="8" width="406" height="20"/>
+                                    <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="20"/>
+                                    <color key="textColor" name="primaryTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="YTd-Jj-ReQ" secondAttribute="trailing" id="4Ys-bW-8NL"/>
+                                <constraint firstItem="YTd-Jj-ReQ" firstAttribute="leading" secondItem="KGF-uW-MMI" secondAttribute="leading" constant="8" id="PVd-zc-lBe"/>
+                                <constraint firstAttribute="bottom" secondItem="Nq7-fx-VE6" secondAttribute="bottom" constant="8" id="eWI-p4-DIy"/>
+                                <constraint firstItem="Nq7-fx-VE6" firstAttribute="height" secondItem="KGF-uW-MMI" secondAttribute="height" multiplier="0.263158" id="fTr-qK-WvF"/>
+                                <constraint firstItem="YTd-Jj-ReQ" firstAttribute="top" secondItem="KGF-uW-MMI" secondAttribute="top" constant="8" id="idy-Qv-mkh"/>
+                                <constraint firstItem="Nq7-fx-VE6" firstAttribute="leading" secondItem="KGF-uW-MMI" secondAttribute="leading" constant="8" id="iob-mD-1Iw"/>
+                                <constraint firstAttribute="trailing" secondItem="Nq7-fx-VE6" secondAttribute="trailing" constant="20" symbolic="YES" id="qhA-Tp-TMA"/>
+                                <constraint firstItem="YTd-Jj-ReQ" firstAttribute="height" secondItem="KGF-uW-MMI" secondAttribute="height" multiplier="0.350877" id="tTD-Gv-VrL"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KxA-mO-e7f">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="KGF-uW-MMI" secondAttribute="bottom" id="AUQ-XI-Rue"/>
+                        <constraint firstItem="KxA-mO-e7f" firstAttribute="height" secondItem="awi-E7-ora" secondAttribute="height" multiplier="0.784906" id="FdI-vY-0f1"/>
+                        <constraint firstItem="KGF-uW-MMI" firstAttribute="height" secondItem="awi-E7-ora" secondAttribute="height" multiplier="0.215094" id="HBp-4y-CAn"/>
+                        <constraint firstItem="KxA-mO-e7f" firstAttribute="leading" secondItem="awi-E7-ora" secondAttribute="leading" id="MSD-V4-vTq"/>
+                        <constraint firstAttribute="trailing" secondItem="KGF-uW-MMI" secondAttribute="trailing" id="ZX8-59-uOb"/>
+                        <constraint firstItem="KGF-uW-MMI" firstAttribute="leading" secondItem="awi-E7-ora" secondAttribute="leading" id="dgz-tE-OqT"/>
+                        <constraint firstAttribute="trailing" secondItem="KxA-mO-e7f" secondAttribute="trailing" id="u1s-nO-L33"/>
+                        <constraint firstItem="KxA-mO-e7f" firstAttribute="top" secondItem="awi-E7-ora" secondAttribute="top" id="zX3-wN-eey"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <accessibility key="accessibilityConfiguration" identifier="ReusableRecipeViewHeader"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="awi-E7-ora" secondAttribute="bottom" id="IYh-xd-dt8"/>
+                <constraint firstItem="awi-E7-ora" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eHp-ym-Izi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="awi-E7-ora" secondAttribute="trailing" id="ldt-lY-QZa"/>
+                <constraint firstItem="awi-E7-ora" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rZm-Gh-qwK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="recipeImage" destination="KxA-mO-e7f" id="a9F-Xa-w1c"/>
+                <outlet property="recipeName" destination="YTd-Jj-ReQ" id="PmM-XY-zdy"/>
+                <outlet property="timeToCook" destination="Nq7-fx-VE6" id="TPU-Ch-a14"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="111.49553571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primaryTextColor">
+            <color red="0.24699999392032623" green="0.18000000715255737" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

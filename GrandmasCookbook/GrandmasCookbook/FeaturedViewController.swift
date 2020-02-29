@@ -30,9 +30,24 @@ class FeaturedViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     //MARK: Table View Managment
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toRecipePage", sender: nil)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return featuredRecipes.count
     }
+    
+    //TODO: - Fix adding more data.
+//    //INFO: Get more data when there's not enough to display.
+//    var gettingMoreData = false
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if indexPath.row == featuredRecipes.count-1 && gettingMoreData == false {
+//            //Utilities.Configure.getMoreData(refresh: featuredTableView)
+//            featuredTableView.reloadData()
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = featuredTableView.dequeueReusableCell(withIdentifier: Utilities.StaticStrings.recipeTableViewCell, for: indexPath) as! RecipeTableViewCell
