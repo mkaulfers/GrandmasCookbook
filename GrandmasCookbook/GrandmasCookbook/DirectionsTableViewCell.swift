@@ -9,6 +9,5 @@
 import UIKit
 
 class DirectionsTableViewCell: UITableViewCell {
-
     @IBOutlet var directions: UILabel!    
 }

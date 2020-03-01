@@ -18,6 +18,8 @@
 		AEAF397A240AE21900175774 /* RecipePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEAF3979240AE21900175774 /* RecipePage.storyboard */; };
 		AEAF397D240B1EEB00175774 /* DirectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF397B240B1EEB00175774 /* DirectionsTableViewCell.swift */; };
 		AEAF397E240B1EEB00175774 /* DirectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEAF397C240B1EEB00175774 /* DirectionsTableViewCell.xib */; };
+		AEAF3984240C472A00175774 /* RecipeSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF3983240C472A00175774 /* RecipeSectionFooter.swift */; };
+		AEAF3986240C474100175774 /* RecipeSectionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEAF3985240C474100175774 /* RecipeSectionFooter.xib */; };
 		AEC2A20E23F9F0F100A956DD /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2A20D23F9F0F100A956DD /* SectionHeader.swift */; };
 		AEC2A21023F9F11000A956DD /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A20F23F9F11000A956DD /* SectionHeader.xib */; };
 		AEC2A22123F9FA0C00A956DD /* GothamRounded-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = AEC2A21423F9FA0A00A956DD /* GothamRounded-Book.otf */; };
@@ -76,6 +78,8 @@
 		AEAF3979240AE21900175774 /* RecipePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipePage.storyboard; sourceTree = "<group>"; };
 		AEAF397B240B1EEB00175774 /* DirectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsTableViewCell.swift; sourceTree = "<group>"; };
 		AEAF397C240B1EEB00175774 /* DirectionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectionsTableViewCell.xib; sourceTree = "<group>"; };
+		AEAF3983240C472A00175774 /* RecipeSectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSectionFooter.swift; sourceTree = "<group>"; };
+		AEAF3985240C474100175774 /* RecipeSectionFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeSectionFooter.xib; sourceTree = "<group>"; };
 		AEC2A20D23F9F0F100A956DD /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		AEC2A20F23F9F11000A956DD /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		AEC2A21423F9FA0A00A956DD /* GothamRounded-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Book.otf"; sourceTree = "<group>"; };
@@ -204,19 +208,45 @@
 			name = RecipePage;
 			sourceTree = "<group>";
 		};
-		AEC2A21123F9F50B00A956DD /* Reusable XIB's */ = {
+		AEAF3987240C5BA800175774 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				AEC2A20F23F9F11000A956DD /* SectionHeader.xib */,
 				AEC2A20D23F9F0F100A956DD /* SectionHeader.swift */,
-				AEDD44F723FC4D6E007649E7 /* RecipeTableViewCell.xib */,
-				AEDD44F623FC4D6E007649E7 /* RecipeTableViewCell.swift */,
 				AEDEF621240AC84600406A15 /* RecipeSectionHeader.xib */,
 				AEDEF61F240AC83600406A15 /* RecipeSectionHeader.swift */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		AEAF3988240C5BB200175774 /* Footers */ = {
+			isa = PBXGroup;
+			children = (
+				AEAF3985240C474100175774 /* RecipeSectionFooter.xib */,
+				AEAF3983240C472A00175774 /* RecipeSectionFooter.swift */,
+			);
+			name = Footers;
+			sourceTree = "<group>";
+		};
+		AEAF3989240C5BB800175774 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AEDD44F723FC4D6E007649E7 /* RecipeTableViewCell.xib */,
+				AEDD44F623FC4D6E007649E7 /* RecipeTableViewCell.swift */,
 				AEAF3974240AD48700175774 /* IngredientTableViewCell.xib */,
 				AEAF3973240AD48700175774 /* IngredientTableViewCell.swift */,
 				AEAF397C240B1EEB00175774 /* DirectionsTableViewCell.xib */,
 				AEAF397B240B1EEB00175774 /* DirectionsTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		AEC2A21123F9F50B00A956DD /* Reusable XIB's */ = {
+			isa = PBXGroup;
+			children = (
+				AEAF3989240C5BB800175774 /* Cells */,
+				AEAF3988240C5BB200175774 /* Footers */,
+				AEAF3987240C5BA800175774 /* Headers */,
 			);
 			name = "Reusable XIB's";
 			sourceTree = "<group>";
@@ -400,6 +430,7 @@
 				AE4554B323F8905800D016B8 /* GoogleService-Info.plist in Resources */,
 				AEC2A22D23F9FA0C00A956DD /* GothamRounded-Bold.otf in Resources */,
 				AEC2A22923F9FA0C00A956DD /* GothamRoundedLight_21020.ttf in Resources */,
+				AEAF3986240C474100175774 /* RecipeSectionFooter.xib in Resources */,
 				AED3F02523F72DA600E5C7B9 /* Pantry.storyboard in Resources */,
 				AEDEF622240AC84600406A15 /* RecipeSectionHeader.xib in Resources */,
 				AED3F02B23F72EE400E5C7B9 /* FeaturedPage.storyboard in Resources */,
@@ -463,6 +494,7 @@
 				AED3F01C23F72C5700E5C7B9 /* HomePageViewController.swift in Sources */,
 				AECE07FE23F4A4EE0048060D /* GrandmasCookbook.xcdatamodeld in Sources */,
 				AED3F02023F72C6600E5C7B9 /* SearchViewController.swift in Sources */,
+				AEAF3984240C472A00175774 /* RecipeSectionFooter.swift in Sources */,
 				AEDD44F823FC4D6E007649E7 /* RecipeTableViewCell.swift in Sources */,
 				AED3F01A23F72C4900E5C7B9 /* ShoppingListViewController.swift in Sources */,
 				AE90C3F223F74D0D00F3E0E8 /* ProfileViewController.swift in Sources */,

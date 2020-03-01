@@ -92,11 +92,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = searchTableView.dequeueReusableCell(withIdentifier: Utilities.StaticStrings.recipeTableViewCell, for: indexPath) as! RecipeTableViewCell
         
         //INFO: Get the Image For the Cell
-        if let recipeImageLink = searchableRecipes[indexPath.row].imageLink
+        if let recipeImageLink = searchableRecipes[indexPath.row].image
         {
             cell.foodImage.image = nil
             
-            if let cachedImage = Utilities.GlobalData.imageCache.object(forKey: NSString(string: searchableRecipes[indexPath.row].imageLink!)) {
+            if let cachedImage = Utilities.GlobalData.imageCache.object(forKey: NSString(string: searchableRecipes[indexPath.row].image!)) {
                 cell.foodImage.image = cachedImage
             }else{
                 DispatchQueue.global(qos: .background).async {

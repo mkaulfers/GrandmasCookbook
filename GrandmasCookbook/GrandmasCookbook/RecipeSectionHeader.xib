@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="GothamRounded-Light.otf">
-            <string>GothamRounded-Light</string>
-        </array>
-        <array key="GothamRoundedBook_21018.ttf">
+        <array key="GothamRounded-Book.otf">
             <string>GothamRounded-Book</string>
+        </array>
+        <array key="GothamRoundedLight_21020.ttf">
+            <string>GothamRounded-Light</string>
         </array>
     </customFonts>
     <objects>

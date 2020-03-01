@@ -27,7 +27,7 @@ class Recipe: Codable{
     var readyInMinutes: Int?
     var title: String?
     var extendedIngredients: [Ingredient]?
-    var imageLink: String?
+    var image: String?
     var instructions: String?
     
     init()
@@ -39,7 +39,7 @@ class Recipe: Codable{
         readyInMinutes = 0
         title = "Unknown"
         extendedIngredients = [Ingredient]()
-        imageLink = "https://www.livehappy.com/sites/default/files/styles/article_featured/public/main/articles/peppers-pan-stove-flame.jpg?itok=Po__tNob"
+        image = "https://www.livehappy.com/sites/default/files/styles/article_featured/public/main/articles/peppers-pan-stove-flame.jpg?itok=Po__tNob"
         instructions = "None Available"
     }
 }
@@ -106,7 +106,7 @@ class MeasureInfo: Codable{
 //    var readyInMinutes: Int?
 //    var title: String?
 //    var extendedIngredients: [Ingredient]?
-//    var imageLink: String?
+//    var image: String?
 //    var instructions: String?
 //
 //    init()

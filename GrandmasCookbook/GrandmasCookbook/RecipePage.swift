@@ -27,12 +27,15 @@ class RecipePage: UITableViewController {
         
         let reusableDirections = UINib.init(nibName: "DirectionsTableViewCell", bundle: Bundle.main)
         tableView.register(reusableDirections, forCellReuseIdentifier: "DirectionsTableViewCell")
+        
+        let reusableFooter = UINib.init(nibName: "RecipeSectionFooter", bundle: Bundle.main)
+        tableView.register(reusableFooter, forHeaderFooterViewReuseIdentifier: "RecipeSectionFooter")
     
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -58,6 +61,8 @@ class RecipePage: UITableViewController {
             return ingredients.count
         case 2:
             return 1
+        case 3:
+            return 0
         default:
             print("Error 404")
         }
@@ -99,25 +104,26 @@ class RecipePage: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        //INFO: Bring in each header piece and set their height accordingly.
-        let recipeViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RecipeSectionHeader") as! RecipeSectionHeader
-        
-        let ingredientViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
-        
-        let directionsViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
-        
         if section == 0
         {
+            //INFO: Bring in each header piece and set their height accordingly.
+            let recipeViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RecipeSectionHeader") as! RecipeSectionHeader
             return recipeViewHeader.bounds.size.height
         }
         else if section == 1
         {
+            let ingredientViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
             return ingredientViewHeader.bounds.size.height
         }
         else if section == 2
         {
+            let directionsViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
             return directionsViewHeader.bounds.size.height
+        }
+        else if section == 3
+        {
+            let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RecipeSectionFooter") as! RecipeSectionFooter
+            return footerView.bounds.size.height
         }
         return 0
     }
@@ -127,7 +133,7 @@ class RecipePage: UITableViewController {
         {
             let recipeViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RecipeSectionHeader") as! RecipeSectionHeader
             
-            recipeViewHeader.recipeImage.image = getImage(url: selectedRecipe.imageLink!)
+            recipeViewHeader.recipeImage.image = getImage(url: selectedRecipe.image!)
             recipeViewHeader.recipeName.text = selectedRecipe.title
             recipeViewHeader.timeToCook.text = "\(selectedRecipe.readyInMinutes?.description ?? "?") minutes"
             
@@ -147,6 +153,15 @@ class RecipePage: UITableViewController {
             directionsViewHeader.HeaderText.text = "Directions"
             return directionsViewHeader
         }
+        else if section == 3
+        {
+            let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RecipeSectionFooter") as! RecipeSectionFooter
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleButtonTapped(_:)))
+            footerView.addToPlanImageButton.addGestureRecognizer(tapGesture)
+            
+            return footerView
+        }
         
         return UIView()
     }
@@ -162,5 +177,10 @@ class RecipePage: UITableViewController {
             tempImage = image
         }
         return tempImage
+    }
+    
+    //MARK: - Handle Tap
+    @objc func handleButtonTapped(_ sender: UITapGestureRecognizer){
+        print("Button was pressed...")
     }
 }
