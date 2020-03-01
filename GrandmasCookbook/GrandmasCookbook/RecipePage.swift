@@ -127,7 +127,7 @@ class RecipePage: UITableViewController {
         {
             let recipeViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RecipeSectionHeader") as! RecipeSectionHeader
             
-            recipeViewHeader.recipeImage.image = getImage(url: selectedRecipe.image!)
+            recipeViewHeader.recipeImage.image = getImage(url: selectedRecipe.imageLink!)
             recipeViewHeader.recipeName.text = selectedRecipe.title
             recipeViewHeader.timeToCook.text = "\(selectedRecipe.readyInMinutes?.description ?? "?") minutes"
             

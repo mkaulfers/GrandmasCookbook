@@ -64,11 +64,11 @@ class FeaturedViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = featuredTableView.dequeueReusableCell(withIdentifier: Utilities.StaticStrings.recipeTableViewCell, for: indexPath) as! RecipeTableViewCell
         
         //INFO: Get the Image For the Cell
-        if let existingImage = featuredRecipes[indexPath.row].image
+        if let existingImage = featuredRecipes[indexPath.row].imageLink
         {
             cell.foodImage.image = nil
             
-            if let cachedImage = Utilities.GlobalData.imageCache.object(forKey: NSString(string: featuredRecipes[indexPath.row].image!)) {
+            if let cachedImage = Utilities.GlobalData.imageCache.object(forKey: NSString(string: featuredRecipes[indexPath.row].imageLink!)) {
                 cell.foodImage.image = cachedImage
             }else{
                 DispatchQueue.global(qos: .background).async {

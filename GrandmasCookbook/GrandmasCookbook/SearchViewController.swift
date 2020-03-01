@@ -73,7 +73,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 if ingredient.name!.contains(filter.lowercased())
                 {
                     searchableRecipes.append(recipe)
-                    continue
+                    break
                 }
             }
         }
@@ -92,20 +92,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = searchTableView.dequeueReusableCell(withIdentifier: Utilities.StaticStrings.recipeTableViewCell, for: indexPath) as! RecipeTableViewCell
         
         //INFO: Get the Image For the Cell
-        if let existingImage = searchableRecipes[indexPath.row].image
+        if let recipeImageLink = searchableRecipes[indexPath.row].imageLink
         {
             cell.foodImage.image = nil
             
-            if let cachedImage = Utilities.GlobalData.imageCache.object(forKey: NSString(string: searchableRecipes[indexPath.row].image!)) {
+            if let cachedImage = Utilities.GlobalData.imageCache.object(forKey: NSString(string: searchableRecipes[indexPath.row].imageLink!)) {
                 cell.foodImage.image = cachedImage
             }else{
                 DispatchQueue.global(qos: .background).async {
-                    let url = URL(string: existingImage)
+                    let url = URL(string: recipeImageLink)
                     let data = try? Data(contentsOf: url!)
                     let image = UIImage(data: data!)
                     
                     DispatchQueue.main.async {
-                        Utilities.GlobalData.imageCache.setObject(image!, forKey: existingImage as NSString)
+                        Utilities.GlobalData.imageCache.setObject(image!, forKey: recipeImageLink as NSString)
                         cell.foodImage.image = image
                     }
                 }
