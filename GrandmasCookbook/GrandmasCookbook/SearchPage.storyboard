@@ -43,7 +43,7 @@
                                     <string>Custom</string>
                                 </scopeButtonTitles>
                                 <connections>
-                                    <outlet property="delegate" destination="8bN-vH-Jj5" id="fDJ-MP-Fr4"/>
+                                    <outlet property="delegate" destination="8bN-vH-Jj5" id="fjZ-M1-zEk"/>
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-gQ-EMh">
@@ -97,7 +97,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOz-xJ-HGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4646" y="51"/>
+            <point key="canvasLocation" x="4328" y="32"/>
         </scene>
     </scenes>
     <resources>

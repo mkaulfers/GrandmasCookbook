@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     //MARK: - Class Vars and Outlets
     @IBOutlet var recipesTableView: UITableView!
     @IBOutlet var searchBarWithScope: UISearchBar!
@@ -52,9 +52,34 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.reloadData()
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        //TODO: - Begin Searching.
-        print("Changed to another search type.")
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchableRecipes = [Recipe]()
+        let searchedText = searchBar.text
+        
+        guard let filter = searchedText else { return }
+        
+        for recipe in Utilities.GlobalData.currentRecipes.recipes
+        {
+            //INFO: Speeding the searching up a bit by filtering on the title first.
+            if recipe.title!.lowercased().contains(filter.lowercased())
+            {
+                searchableRecipes.append(recipe)
+                continue
+            }
+            
+            //INFO: Search Through Ingredients Also
+            for ingredient in recipe.extendedIngredients ?? [Ingredient]()
+            {
+                if ingredient.name!.contains(filter.lowercased())
+                {
+                    searchableRecipes.append(recipe)
+                    continue
+                }
+            }
+        }
+        
+        searchTableView.reloadData()
+        
     }
     
     //MARK: - Table View Managment
