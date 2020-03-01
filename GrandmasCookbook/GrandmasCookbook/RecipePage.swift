@@ -9,9 +9,11 @@
 import UIKit
 
 class RecipePage: UITableViewController {
-    
+    //MARK: - Class Vars
     var selectedRecipe = Recipe()
     
+    
+    //MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +35,8 @@ class RecipePage: UITableViewController {
     
     }
     
-    // MARK: - Table view data source
+    // MARK: - Number of sections
+    //INFO: DO NOT modify return value for the sections. This is setup to hold the proper view.
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
@@ -50,6 +53,7 @@ class RecipePage: UITableViewController {
         return UITableView.automaticDimension
     }
     
+    //MARK: - Number of rows in section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section
         {
@@ -61,14 +65,17 @@ class RecipePage: UITableViewController {
             return ingredients.count
         case 2:
             return 1
+        //INFO: ALWAYS, return 0 for case 3. Not doing so will cause unexpected spacing.
         case 3:
             return 0
+        //INFO: Should never reach this.
         default:
             print("Error 404")
         }
         return 0
     }
     
+    //MARK: Cell for row at
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //INFO: Ingredients
@@ -103,6 +110,7 @@ class RecipePage: UITableViewController {
         return UITableViewCell()
     }
     
+    //MARK: - Height for header in section
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0
         {
@@ -128,6 +136,7 @@ class RecipePage: UITableViewController {
         return 0
     }
     
+    //MARK: View for header in section
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0
         {
@@ -181,6 +190,8 @@ class RecipePage: UITableViewController {
     
     //MARK: - Handle Tap
     @objc func handleButtonTapped(_ sender: UITapGestureRecognizer){
-        print("Button was pressed...")
+        self.dismiss(animated: true) {
+            Utilities.GlobalData.savedRecipes[String(self.selectedRecipe.id!)] = self.selectedRecipe
+        }
     }
 }

@@ -16,7 +16,12 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        let reusableRecipe = UINib.init(nibName: "RecipeTableViewCell", bundle: Bundle.main)
+        savedRecipeTableView.register(reusableRecipe, forCellReuseIdentifier: "recipeTableViewCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        savedRecipeTableView.reloadData()
     }
     
     @IBAction func viewAccountSelected(_ sender: UIButton) {
@@ -30,11 +35,13 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //MARK: - Table View Management
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return Utilities.GlobalData.savedRecipes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = savedRecipeTableView.dequeueReusableCell(withIdentifier: "recipeTableViewCell") as! RecipeTableViewCell
+
+        return cell
     }
     
 }
