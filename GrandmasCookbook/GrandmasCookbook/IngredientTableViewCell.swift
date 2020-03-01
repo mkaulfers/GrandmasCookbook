@@ -1,5 +1,5 @@
 //
-//  ReusableIngredient.swift
+//  IngredientTableViewCell.swift
 //  GrandmasCookbook
 //
 //  Created by Matthew Kaulfers on 2/29/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReusableIngredient: UITableViewCell {
+class IngredientTableViewCell: UITableViewCell {
 
     @IBOutlet var ingredientName: UILabel!
     @IBOutlet var quantityValue: UILabel!

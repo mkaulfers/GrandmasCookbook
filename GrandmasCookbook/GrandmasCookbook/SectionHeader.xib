@@ -15,7 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ReusableHeader" customModule="GrandmasCookbook" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SectionHeader" customModule="GrandmasCookbook" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -38,7 +38,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <accessibility key="accessibilityConfiguration" identifier="ReusableHeader"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eEu-tO-WEG" secondAttribute="bottom" id="21z-wd-6iM"/>
                 <constraint firstItem="eEu-tO-WEG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KgR-Hh-vc8"/>

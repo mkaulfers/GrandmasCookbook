@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ReusableHeader: UITableViewHeaderFooterView {
+class SectionHeader: UITableViewHeaderFooterView {
     @IBOutlet var HeaderText: UILabel!
 }

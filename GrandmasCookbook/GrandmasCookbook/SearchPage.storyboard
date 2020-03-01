@@ -82,11 +82,22 @@
                         <outlet property="recipesTableView" destination="LWQ-JU-B9X" id="hVf-TC-7Xp"/>
                         <outlet property="searchBarWithScope" destination="UBG-Xf-LGO" id="5It-LF-o6Q"/>
                         <outlet property="searchTableView" destination="LWQ-JU-B9X" id="5d3-5T-qbg"/>
+                        <segue destination="Enp-TC-1so" kind="show" identifier="toRecipePage" id="WU5-oM-Qnf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXK-uE-vWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3844.9275362318845" y="128.57142857142856"/>
+        </scene>
+        <!--RecipePage-->
+        <scene sceneID="5En-Li-eF9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecipePage" id="Enp-TC-1so" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="by2-VY-8DT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOz-xJ-HGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4646" y="51"/>
         </scene>
     </scenes>
     <resources>

@@ -10,23 +10,24 @@ import UIKit
 
 class RecipePage: UITableViewController {
     
-    let selectedRecipe = Recipe()
+    var selectedRecipe = Recipe()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //INFO: Load the header view.
-        let headerNib = UINib.init(nibName: "ReusableRecipeViewHeader", bundle: Bundle.main)
-        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "ReusableRecipeViewHeader")
+        let headerNib = UINib.init(nibName: "RecipeSectionHeader", bundle: Bundle.main)
+        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "RecipeSectionHeader")
         
-        let sectionHeader = UINib.init(nibName: "ReusableHeader", bundle: Bundle.main)
-        tableView.register(sectionHeader, forHeaderFooterViewReuseIdentifier: "ReusableHeader")
+        let sectionHeader = UINib.init(nibName: "SectionHeader", bundle: Bundle.main)
+        tableView.register(sectionHeader, forHeaderFooterViewReuseIdentifier: "SectionHeader")
         
-        let reusableCell = UINib.init(nibName: "ReusableIngredient", bundle: Bundle.main)
-        tableView.register(reusableCell, forCellReuseIdentifier: "ReusableIngredient")
+        let reusableIngredient = UINib.init(nibName: "IngredientTableViewCell", bundle: Bundle.main)
+        tableView.register(reusableIngredient, forCellReuseIdentifier: "IngredientTableViewCell")
         
-        //INFO: Hide the separator
-        tableView.separatorColor = .clear
+        let reusableDirections = UINib.init(nibName: "DirectionsTableViewCell", bundle: Bundle.main)
+        tableView.register(reusableDirections, forCellReuseIdentifier: "DirectionsTableViewCell")
+    
     }
     
     // MARK: - Table view data source
@@ -34,46 +35,77 @@ class RecipePage: UITableViewController {
         return 3
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let ingredients = selectedRecipe.extendedIngredients else { return 0 }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
+        if indexPath.section == 1
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientTableViewCell") as! IngredientTableViewCell
+            
+            return cell.bounds.height
+        }
+        
+        return UITableView.automaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section
         {
+        //INFO: ALWAYS, return 0 for case 0. Not doing so will cause unexpected spacing.
         case 0:
             return 0
         case 1:
-            return 3
+            guard let ingredients = selectedRecipe.extendedIngredients else { return 0 }
+            return ingredients.count
         case 2:
-            return 0
+            return 1
         default:
             print("Error 404")
         }
-        return 3
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //INFO: Ingredients
         if indexPath.section == 1
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableIngredient", for: indexPath) as! ReusableIngredient
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientTableViewCell", for: indexPath) as! IngredientTableViewCell
+            
+            guard let ingredient = selectedRecipe.extendedIngredients?[indexPath.row] else { return UITableViewCell() }
+            
+            cell.ingredientName.text = ingredient.name
+            cell.quantityValue.text = ingredient.measures?.us?.amount?.description ?? 0.0.description
+            cell.quantityDescription.text = " \(ingredient.measures?.us?.unitShort ?? "Unknown")"
+            
+            cell.ingredientStepper.isHidden = true
             
             return cell
         }
+            
+        //INFO: Directions
         else if indexPath.section == 2
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableIngredient", for: indexPath) as! ReusableIngredient
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DirectionsTableViewCell", for: indexPath) as! DirectionsTableViewCell
+            
+            //REGEX: Removes "<xxx>" where xxx is any characters. Formats some of the recipes instructions that are being returned, otherwise no effect.
+            let directions = selectedRecipe.instructions!.replacingOccurrences(of: "\\<(.*?)\\>", with: " ", options: .regularExpression)
+            
+            cell.directions.text = directions
             
             return cell
         }
-        
+        //Should never reach this.
         return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        let recipeViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableRecipeViewHeader") as! ReusableRecipeViewHeader
         
-        let ingredientViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableHeader") as! ReusableHeader
+        //INFO: Bring in each header piece and set their height accordingly.
+        let recipeViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RecipeSectionHeader") as! RecipeSectionHeader
         
-        let directionsViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableHeader") as! ReusableHeader
+        let ingredientViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
+        
+        let directionsViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
         
         if section == 0
         {
@@ -91,28 +123,44 @@ class RecipePage: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let recipeViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableRecipeViewHeader") as! ReusableRecipeViewHeader
-        
-        let ingredientViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableHeader") as! ReusableHeader
-        
-        let directionsViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableHeader") as! ReusableHeader
-        
         if section == 0
         {
+            let recipeViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RecipeSectionHeader") as! RecipeSectionHeader
+            
+            recipeViewHeader.recipeImage.image = getImage(url: selectedRecipe.image!)
+            recipeViewHeader.recipeName.text = selectedRecipe.title
+            recipeViewHeader.timeToCook.text = "\(selectedRecipe.readyInMinutes?.description ?? "?") minutes"
+            
             return recipeViewHeader
         }
         else if section == 1
         {
+            let ingredientViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
+            
             ingredientViewHeader.HeaderText.text = "Ingredients"
             return ingredientViewHeader
         }
         else if section == 2
         {
+            let directionsViewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
+            
             directionsViewHeader.HeaderText.text = "Directions"
             return directionsViewHeader
         }
         
         return UIView()
+    }
+    
+    //MARK: - Load Image
+    func getImage(url: String) -> UIImage
+    {
+        var tempImage = UIImage()
+        DispatchQueue.global(qos: .background).sync {
+            let url = URL(string: url)
+            let data = try? Data(contentsOf: url!)
+            let image = UIImage(data: data!)!
+            tempImage = image
+        }
+        return tempImage
     }
 }

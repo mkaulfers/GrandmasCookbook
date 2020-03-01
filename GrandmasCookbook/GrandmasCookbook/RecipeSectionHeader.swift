@@ -1,5 +1,5 @@
 //
-//  ReusableRecipeViewHeader.swift
+//  RecipeSectionHeader.swift
 //  GrandmasCookbook
 //
 //  Created by Matthew Kaulfers on 2/29/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReusableRecipeViewHeader: UITableViewHeaderFooterView {
+class RecipeSectionHeader: UITableViewHeaderFooterView {
     @IBOutlet var recipeImage: UIImageView!
     @IBOutlet var recipeName: UILabel!
     @IBOutlet var timeToCook: UILabel!

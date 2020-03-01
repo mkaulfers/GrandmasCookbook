@@ -69,6 +69,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //INFO: Get the Image For the Cell
         if let existingImage = searchableRecipes[indexPath.row].image
         {
+            cell.foodImage.image = nil
+            
             if let cachedImage = Utilities.GlobalData.imageCache.object(forKey: NSString(string: searchableRecipes[indexPath.row].image!)) {
                 cell.foodImage.image = cachedImage
             }else{
@@ -111,6 +113,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.recipeName.text = searchableRecipes[indexPath.row].title
         return cell
+    }
+    
+    //MARK: - Did Select Row @
+    var selectedRecipe = Recipe()
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRecipe = searchableRecipes[indexPath.row]
+        performSegue(withIdentifier: "toRecipePage", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! RecipePage
+        destination.selectedRecipe = selectedRecipe
     }
     
 }

@@ -18,8 +18,8 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
 
         //INFO: Load the header view.
-        let headerNib = UINib.init(nibName: "ReusableHeader", bundle: Bundle.main)
-        shoppingListTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "ReusableHeader")
+        let headerNib = UINib.init(nibName: "SectionHeader", bundle: Bundle.main)
+        shoppingListTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "SectionHeader")
         
         //INFO: Hide the separator
         shoppingListTableView.separatorColor = .clear
@@ -28,12 +28,12 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
 
     //MARK: - Table View Management
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        let headerView = shoppingListTableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableHeader") as! ReusableHeader
+        let headerView = shoppingListTableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
         return headerView.bounds.size.height
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = shoppingListTableView.dequeueReusableHeaderFooterView(withIdentifier: "ReusableHeader") as! ReusableHeader
+        let headerView = shoppingListTableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
         
         headerView.HeaderText.text = "Shopping List"
         
