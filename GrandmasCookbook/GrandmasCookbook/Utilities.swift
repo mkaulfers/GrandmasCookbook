@@ -31,6 +31,7 @@ struct Utilities
         static var currentRecipes: Recipes = Recipes()
         static var imageCache = NSCache<NSString, UIImage>()
         static var savedRecipes = [Recipe]()
+        static var savedPantryItems = [PantryItem]()
     }
     
     //MARK: - Validation Methods

@@ -132,6 +132,5 @@ class HomePageViewController: UIViewController, UITableViewDataSource, UITableVi
         DispatchQueue.main.async {
             self.savedRecipeTableView.reloadData()
         }
-        //savedRecipeTableView.reloadData()
     }
 }

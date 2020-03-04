@@ -10,6 +10,9 @@
 		AE3A602D2400E9D700488FD0 /* TestJsonObject.json in Resources */ = {isa = PBXBuildFile; fileRef = AE3A602C2400E9D700488FD0 /* TestJsonObject.json */; };
 		AE4554B323F8905800D016B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE4554B223F8905800D016B8 /* GoogleService-Info.plist */; };
 		AE778739240F3E1B0094FE31 /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE778738240F3E1B0094FE31 /* Mediator.swift */; };
+		AE77873B240F46760094FE31 /* SearchableIngredients.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE77873A240F46760094FE31 /* SearchableIngredients.txt */; };
+		AE77873D240F48380094FE31 /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77873C240F48380094FE31 /* PantryItem.swift */; };
+		AE77873F240F4C120094FE31 /* PantryItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77873E240F4C120094FE31 /* PantryItemsView.swift */; };
 		AE7E11EF23F9B640003969D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7E11EE23F9B640003969D8 /* Utilities.swift */; };
 		AE90C3F023F74AC800F3E0E8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */; };
 		AE90C3F223F74D0D00F3E0E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */; };
@@ -70,6 +73,9 @@
 		AE3A602C2400E9D700488FD0 /* TestJsonObject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestJsonObject.json; sourceTree = "<group>"; };
 		AE4554B223F8905800D016B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE778738240F3E1B0094FE31 /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
+		AE77873A240F46760094FE31 /* SearchableIngredients.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchableIngredients.txt; sourceTree = "<group>"; };
+		AE77873C240F48380094FE31 /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
+		AE77873E240F4C120094FE31 /* PantryItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItemsView.swift; sourceTree = "<group>"; };
 		AE7E11EE23F9B640003969D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -159,9 +165,11 @@
 			children = (
 				AE7E11EE23F9B640003969D8 /* Utilities.swift */,
 				AEDD44FA23FC824B007649E7 /* RecipeStructs.swift */,
+				AE77873A240F46760094FE31 /* SearchableIngredients.txt */,
 				AE3A602C2400E9D700488FD0 /* TestJsonObject.json */,
 				AEDEF619240609A300406A15 /* Extensions.swift */,
 				AE778738240F3E1B0094FE31 /* Mediator.swift */,
+				AE77873C240F48380094FE31 /* PantryItem.swift */,
 			);
 			name = Utitlities;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				AED3F02423F72DA600E5C7B9 /* Pantry.storyboard */,
+				AE77873E240F4C120094FE31 /* PantryItemsView.swift */,
 				AED3F01723F72C3300E5C7B9 /* PantryViewController.swift */,
 			);
 			name = PantryPage;
@@ -414,6 +423,7 @@
 				AEAF3976240AD48700175774 /* IngredientTableViewCell.xib in Resources */,
 				AED3F02923F72EA900E5C7B9 /* HomePage.storyboard in Resources */,
 				AED3F03123F741D200E5C7B9 /* Profile.storyboard in Resources */,
+				AE77873B240F46760094FE31 /* SearchableIngredients.txt in Resources */,
 				AEC2A22323F9FA0C00A956DD /* GothamRounded-Medium.otf in Resources */,
 				AECE080023F4A4F00048060D /* Assets.xcassets in Resources */,
 				AEC2A22823F9FA0C00A956DD /* GothamRounded-LightItalic.otf in Resources */,
@@ -497,6 +507,7 @@
 				AED3F01C23F72C5700E5C7B9 /* HomePageViewController.swift in Sources */,
 				AE778739240F3E1B0094FE31 /* Mediator.swift in Sources */,
 				AECE07FE23F4A4EE0048060D /* GrandmasCookbook.xcdatamodeld in Sources */,
+				AE77873D240F48380094FE31 /* PantryItem.swift in Sources */,
 				AED3F02023F72C6600E5C7B9 /* SearchViewController.swift in Sources */,
 				AEAF3984240C472A00175774 /* RecipeSectionFooter.swift in Sources */,
 				AEDD44F823FC4D6E007649E7 /* RecipeTableViewCell.swift in Sources */,
@@ -507,6 +518,7 @@
 				AECE07F623F4A4EE0048060D /* SceneDelegate.swift in Sources */,
 				AED3F01E23F72C5F00E5C7B9 /* FeaturedViewController.swift in Sources */,
 				AEAF3975240AD48700175774 /* IngredientTableViewCell.swift in Sources */,
+				AE77873F240F4C120094FE31 /* PantryItemsView.swift in Sources */,
 				AED3F03823F7428100E5C7B9 /* LoginViewController.swift in Sources */,
 				AEDEF61A240609A300406A15 /* Extensions.swift in Sources */,
 				AEDD44FB23FC824B007649E7 /* RecipeStructs.swift in Sources */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xx0-aO-Qzb">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,32 +13,44 @@
             <objects>
                 <viewController id="xx0-aO-Qzb" customClass="PantryViewController" customModule="GrandmasCookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pA5-Vq-ZI2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JkQ-9o-Y1t">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                 <color key="backgroundColor" name="primaryBGColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="9BY-qZ-eOT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="37.666666666666657"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mJz-Pe-Zly">
-                                <rect key="frame" x="0.0" y="48" width="320" height="383"/>
+                                <rect key="frame" x="0.0" y="89.666666666666686" width="414" height="723.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="xx0-aO-Qzb" id="ESL-Zu-Cds"/>
                                     <outlet property="delegate" destination="xx0-aO-Qzb" id="xiS-gP-czu"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdr-wz-UHg">
+                                <rect key="frame" x="362" y="51.666666666666664" width="18" height="21.999999999999993"/>
+                                <color key="tintColor" name="primaryTextColor"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <segue destination="Emm-hP-ME9" kind="presentation" id="7Bw-2u-une"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9BY-qZ-eOT" firstAttribute="bottom" secondItem="JkQ-9o-Y1t" secondAttribute="bottom" constant="-8" id="59B-QK-2Fh"/>
+                            <constraint firstItem="Xdr-wz-UHg" firstAttribute="height" secondItem="9BY-qZ-eOT" secondAttribute="height" multiplier="0.584071" id="5Su-Pz-HhR"/>
                             <constraint firstItem="9BY-qZ-eOT" firstAttribute="width" secondItem="JkQ-9o-Y1t" secondAttribute="width" id="BFI-NM-Rux"/>
                             <constraint firstItem="mJz-Pe-Zly" firstAttribute="leading" secondItem="pA5-Vq-ZI2" secondAttribute="leading" id="CFl-Vr-vHg"/>
                             <constraint firstItem="JkQ-9o-Y1t" firstAttribute="trailing" secondItem="pA5-Vq-ZI2" secondAttribute="trailing" id="CyM-aV-wDG"/>
+                            <constraint firstItem="Xdr-wz-UHg" firstAttribute="width" secondItem="9BY-qZ-eOT" secondAttribute="width" multiplier="0.0434783" id="D54-AJ-DQP"/>
+                            <constraint firstItem="cQD-7I-7ZQ" firstAttribute="trailing" secondItem="Xdr-wz-UHg" secondAttribute="trailing" constant="34" id="IPU-c4-Nxo"/>
                             <constraint firstItem="JkQ-9o-Y1t" firstAttribute="height" secondItem="pA5-Vq-ZI2" secondAttribute="height" multiplier="0.1" id="KqF-xC-1wp"/>
+                            <constraint firstItem="Xdr-wz-UHg" firstAttribute="centerY" secondItem="9BY-qZ-eOT" secondAttribute="centerY" id="WiA-J3-xJJ"/>
                             <constraint firstItem="cQD-7I-7ZQ" firstAttribute="bottom" secondItem="mJz-Pe-Zly" secondAttribute="bottom" id="cNc-sr-GpO"/>
                             <constraint firstItem="9BY-qZ-eOT" firstAttribute="centerX" secondItem="JkQ-9o-Y1t" secondAttribute="centerX" id="eDI-Pe-n8p"/>
                             <constraint firstItem="JkQ-9o-Y1t" firstAttribute="leading" secondItem="pA5-Vq-ZI2" secondAttribute="leading" id="fcu-jq-pXZ"/>
@@ -60,12 +72,53 @@
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="128.57142857142856"/>
         </scene>
+        <!--Pantry Items View-->
+        <scene sceneID="Hvg-P2-bZz">
+            <objects>
+                <tableViewController id="Emm-hP-ME9" customClass="PantryItemsView" customModule="GrandmasCookbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="D6j-0C-7KX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusableLocalCell" textLabel="MQq-7z-GND" style="IBUITableViewCellStyleDefault" id="T4Q-gn-Cig">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T4Q-gn-Cig" id="wh8-oO-0tQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MQq-7z-GND">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Emm-hP-ME9" id="6QB-aE-aPU"/>
+                            <outlet property="delegate" destination="Emm-hP-ME9" id="NkQ-vz-nWM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMv-VC-OYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="129"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="logoHorizontal" width="179.5" height="43"/>
+        <image name="logoHorizontal" width="179.33332824707031" height="43"/>
         <image name="pantryButton" width="25" height="25"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
         <namedColor name="primaryBGColor">
             <color red="0.2669999897480011" green="1" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryTextColor">
+            <color red="0.24699999392032623" green="0.18000000715255737" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
