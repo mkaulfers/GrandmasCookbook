@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE3A602D2400E9D700488FD0 /* TestJsonObject.json in Resources */ = {isa = PBXBuildFile; fileRef = AE3A602C2400E9D700488FD0 /* TestJsonObject.json */; };
 		AE4554B323F8905800D016B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE4554B223F8905800D016B8 /* GoogleService-Info.plist */; };
+		AE778739240F3E1B0094FE31 /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE778738240F3E1B0094FE31 /* Mediator.swift */; };
 		AE7E11EF23F9B640003969D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7E11EE23F9B640003969D8 /* Utilities.swift */; };
 		AE90C3F023F74AC800F3E0E8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */; };
 		AE90C3F223F74D0D00F3E0E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */; };
@@ -68,6 +69,7 @@
 		8653F2AA4D88101D200563D6 /* Pods_GrandmasCookbook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrandmasCookbook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3A602C2400E9D700488FD0 /* TestJsonObject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestJsonObject.json; sourceTree = "<group>"; };
 		AE4554B223F8905800D016B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AE778738240F3E1B0094FE31 /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
 		AE7E11EE23F9B640003969D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AE90C3EF23F74AC800F3E0E8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE90C3F123F74D0D00F3E0E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				AEDD44FA23FC824B007649E7 /* RecipeStructs.swift */,
 				AE3A602C2400E9D700488FD0 /* TestJsonObject.json */,
 				AEDEF619240609A300406A15 /* Extensions.swift */,
+				AE778738240F3E1B0094FE31 /* Mediator.swift */,
 			);
 			name = Utitlities;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				AEDEF620240AC83600406A15 /* RecipeSectionHeader.swift in Sources */,
 				AEC2A20E23F9F0F100A956DD /* SectionHeader.swift in Sources */,
 				AED3F01C23F72C5700E5C7B9 /* HomePageViewController.swift in Sources */,
+				AE778739240F3E1B0094FE31 /* Mediator.swift in Sources */,
 				AECE07FE23F4A4EE0048060D /* GrandmasCookbook.xcdatamodeld in Sources */,
 				AED3F02023F72C6600E5C7B9 /* SearchViewController.swift in Sources */,
 				AEAF3984240C472A00175774 /* RecipeSectionFooter.swift in Sources */,

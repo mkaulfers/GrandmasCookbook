@@ -11,11 +11,13 @@ import UIKit
 class RecipePage: UITableViewController {
     //MARK: - Class Vars
     var selectedRecipe = Recipe()
-    
+    var isRecipeAdded = Bool()
     
     //MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        isRecipeAdded = checkIfExists()
         
         //INFO: Load the header view.
         let headerNib = UINib.init(nibName: "RecipeSectionHeader", bundle: Bundle.main)
@@ -32,7 +34,6 @@ class RecipePage: UITableViewController {
         
         let reusableFooter = UINib.init(nibName: "RecipeSectionFooter", bundle: Bundle.main)
         tableView.register(reusableFooter, forHeaderFooterViewReuseIdentifier: "RecipeSectionFooter")
-    
     }
     
     // MARK: - Number of sections
@@ -94,7 +95,7 @@ class RecipePage: UITableViewController {
             return cell
         }
             
-        //INFO: Directions
+            //INFO: Directions
         else if indexPath.section == 2
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DirectionsTableViewCell", for: indexPath) as! DirectionsTableViewCell
@@ -169,6 +170,15 @@ class RecipePage: UITableViewController {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleButtonTapped(_:)))
             footerView.addToPlanImageButton.addGestureRecognizer(tapGesture)
             
+            if isRecipeAdded == false
+            {
+                footerView.addToPlanImageButton.image = UIImage(named: "addToPlan")
+            }
+            else if isRecipeAdded == true
+            {
+                footerView.addToPlanImageButton.image = UIImage(named: "removeFromPlan")
+            }
+            
             return footerView
         }
         
@@ -191,7 +201,60 @@ class RecipePage: UITableViewController {
     //MARK: - Handle Tap
     @objc func handleButtonTapped(_ sender: UITapGestureRecognizer){
         self.dismiss(animated: true) {
-            Utilities.GlobalData.savedRecipes[String(self.selectedRecipe.id!)] = self.selectedRecipe
+            
+            if Utilities.GlobalData.savedRecipes.count == 7
+            {
+                //TODO: - Prevent adding more than 7.
+                print("You must remove something.")
+            }
+            else if Utilities.GlobalData.savedRecipes.count <= 7  && self.checkIfExists() == false {
+                
+                if Utilities.GlobalData.savedRecipes.count == 0
+                {
+                    self.selectedRecipe.dayAddedFor = 0
+                }
+                else
+                {
+                    for (i, recipe) in Utilities.GlobalData.savedRecipes.enumerated()
+                    {
+                        if i != recipe.dayAddedFor {
+                            self.selectedRecipe.dayAddedFor = i
+                        }
+                        else
+                        {
+                            self.selectedRecipe.dayAddedFor = Utilities.GlobalData.savedRecipes.count
+                        }
+                    }
+                }
+                
+                Utilities.GlobalData.savedRecipes.append(self.selectedRecipe)
+            }
+            else
+            {
+                for (i, recipe) in Utilities.GlobalData.savedRecipes.enumerated()
+                {
+                    if recipe.id == self.selectedRecipe.id {
+                        Utilities.GlobalData.savedRecipes.remove(at: i)
+                        print("Recipe removed from saved list.")
+                    }
+                }
+            }
         }
+    }
+    
+    func checkIfExists() -> Bool
+    {
+        if !Utilities.GlobalData.savedRecipes.contains(where: { (recipe) -> Bool in
+            recipe.id == self.selectedRecipe.id
+        })
+        {
+            return false
+        }
+        
+        return true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        ModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true)
     }
 }

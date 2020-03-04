@@ -41,7 +41,7 @@
                                     <segue destination="Xp7-Xf-TnR" kind="presentation" modalPresentationStyle="fullScreen" id="kEC-PC-qKV"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-F5-fKD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-F5-fKD">
                                 <rect key="frame" x="0.0" y="81.5" width="414" height="731.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
@@ -71,11 +71,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="savedRecipeTableView" destination="Ofg-F5-fKD" id="Dgm-jl-vkD"/>
+                        <segue destination="RL4-Ub-hcp" kind="presentation" identifier="toRecipePage" id="iW9-Hu-Zyz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqb-9b-CUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2394.202898550725" y="128.57142857142856"/>
+        </scene>
+        <!--RecipePage-->
+        <scene sceneID="lf4-KO-DqZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecipePage" id="RL4-Ub-hcp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpE-oT-Sgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3258" y="-9"/>
         </scene>
     </scenes>
     <resources>

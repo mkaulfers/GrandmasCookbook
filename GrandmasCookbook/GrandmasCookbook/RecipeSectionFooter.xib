@@ -16,7 +16,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nri-QZ-8KM">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addToPlanButton" translatesAutoresizingMaskIntoConstraints="NO" id="GAD-bt-DYC">
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addToPlan" translatesAutoresizingMaskIntoConstraints="NO" id="GAD-bt-DYC">
                             <rect key="frame" x="87" y="0.0" width="240" height="60"/>
                             <gestureRecognizers/>
                         </imageView>
@@ -48,6 +48,6 @@
         </view>
     </objects>
     <resources>
-        <image name="addToPlanButton" width="259" height="66"/>
+        <image name="addToPlan" width="241" height="48"/>
     </resources>
 </document>

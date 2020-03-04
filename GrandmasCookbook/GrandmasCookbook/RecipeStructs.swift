@@ -29,6 +29,7 @@ class Recipe: Codable{
     var extendedIngredients: [Ingredient]?
     var image: String?
     var instructions: String?
+    var dayAddedFor: Int?
     
     init()
     {
@@ -41,6 +42,7 @@ class Recipe: Codable{
         extendedIngredients = [Ingredient]()
         image = "https://www.livehappy.com/sites/default/files/styles/article_featured/public/main/articles/peppers-pan-stove-flame.jpg?itok=Po__tNob"
         instructions = "None Available"
+        dayAddedFor = -1
     }
 }
 
